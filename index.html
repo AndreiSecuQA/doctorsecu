@@ -103,8 +103,8 @@ nav.sc{background:rgba(250,247,242,.93);backdrop-filter:blur(20px);border-bottom
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 400px;position:relative;background:var(--cream);overflow:hidden}
 
 /* Illustration — left, behind text */
-.hero-illu{position:absolute;left:0;top:0;width:54%;height:100%;pointer-events:none;z-index:0;display:flex;align-items:center}
-.hero-illu img{width:100%;height:100%;object-fit:contain;object-position:left center;opacity:.85;animation:flt 9s ease-in-out infinite}
+.hero-illu{position:absolute;left:-2%;top:0;width:58%;height:100%;pointer-events:none;z-index:0;display:flex;align-items:center}
+.hero-illu img{width:100%;height:100%;object-fit:contain;object-position:left center;opacity:.55;animation:flt 9s ease-in-out infinite;mix-blend-mode:multiply}
 @keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 
 /* Ambient blobs */
@@ -115,29 +115,28 @@ nav.sc{background:rgba(250,247,242,.93);backdrop-filter:blur(20px);border-bottom
 @keyframes dB{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,20px)}}
 
 /* Text — overlaps illustration */
-.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:120px 60px 80px 8vw}
-.h-ey{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);margin-bottom:32px}
-.h-ey::before,.h-ey::after{content:'';height:1px;background:var(--sand);opacity:.5;width:28px}
-.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,5.5vw,84px);font-weight:300;line-height:1.06;color:var(--dark);margin-bottom:24px;letter-spacing:-.02em}
-.h1 em{font-style:italic;color:var(--sand)}
-.h-sub{font-size:16px;color:var(--mid);line-height:1.8;max-width:400px;margin-bottom:40px}
-.h-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn-s{display:inline-flex;align-items:center;gap:10px;background:var(--sand);color:var(--white);padding:15px 32px;border-radius:40px;font-size:14px;font-weight:600;letter-spacing:.04em;transition:var(--tr);border:none}
-.btn-s:hover{background:var(--sand-dk);transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,168,130,.4)}
-.btn-g{display:inline-flex;align-items:center;gap:8px;color:var(--dark);font-size:14px;font-weight:500;padding:15px 0;border-bottom:1px solid var(--cream3);transition:var(--tr)}
-.btn-g:hover{color:var(--sand);border-color:var(--sand)}
-.h-badges{display:flex;gap:10px;margin-top:36px;flex-wrap:wrap}
-.h-badge{background:rgba(250,247,242,.85);backdrop-filter:blur(8px);border:1px solid rgba(200,168,130,.3);border-radius:20px;padding:7px 14px;font-size:12px;color:var(--mid);font-weight:500}
+.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:140px 80px 100px 9vw;gap:0}
+.h-ey{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);margin-bottom:36px}
+.h-ey::before{content:'';height:1px;background:var(--sand);opacity:.6;width:32px}
+.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(56px,5.8vw,90px);font-weight:300;line-height:1.04;color:var(--dark);margin-bottom:28px;letter-spacing:-.025em}
+.h1 em{font-style:italic;color:var(--sand);font-weight:300}
+.h-sub{font-size:15px;color:var(--mid);line-height:1.85;max-width:360px;margin-bottom:48px;font-weight:400}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:48px}
+.btn-s{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:var(--white);padding:14px 28px;border-radius:40px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr);border:none}
+.btn-s:hover{background:var(--sand);transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,168,130,.4)}
+.btn-g{display:inline-flex;align-items:center;gap:10px;color:var(--mid);font-size:13px;font-weight:500;letter-spacing:.04em;padding:14px 0;transition:var(--tr)}
+.btn-g:hover{color:var(--sand)}
+.h-badges{display:flex;gap:8px;flex-wrap:wrap}
+.h-badge{border:1px solid rgba(200,168,130,.3);border-radius:20px;padding:6px 14px;font-size:11px;color:var(--light);font-weight:500;letter-spacing:.04em}
 
-/* Doctor photo — right, full height branding */
-.hero-doc{position:relative;z-index:1;overflow:hidden;background:var(--cream2)}
-.hero-doc::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(58,46,40,.55) 100%);z-index:1}
-.hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
-.hero-doc-info{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:32px 28px;text-align:center}
-.hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#fff;letter-spacing:.02em;margin-bottom:6px}
-.hero-doc-title{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65)}
-.hero-doc-badge{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:rgba(200,168,130,.25);backdrop-filter:blur(8px);border:1px solid rgba(200,168,130,.4);border-radius:20px;padding:7px 16px;font-size:11px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.06em;text-transform:uppercase}
-.hero-doc-line{width:40px;height:1px;background:rgba(200,168,130,.6);margin:16px auto 0}
+/* Doctor photo — right, full height, no background */
+.hero-doc{position:relative;z-index:1;overflow:hidden;background:var(--cream);display:flex;flex-direction:column;justify-content:flex-end}
+.hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;mix-blend-mode:multiply}
+.hero-doc-info{position:absolute;bottom:40px;left:0;right:0;z-index:2;padding:0 32px;text-align:left}
+.hero-doc-line{width:32px;height:1px;background:var(--sand);margin-bottom:14px}
+.hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
+.hero-doc-title{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
+.hero-doc-badge{display:inline-flex;align-items:center;gap:6px;margin-top:16px;border:1px solid rgba(200,168,130,.4);border-radius:20px;padding:7px 16px;font-size:11px;font-weight:600;color:var(--sand);letter-spacing:.06em;text-transform:uppercase;background:rgba(250,247,242,.8);backdrop-filter:blur(8px)}
 
 /* SECTIONS */
 section{padding:100px 5vw;position:relative}
