@@ -41,9 +41,8 @@ body::before{content:'';position:fixed;inset:0;
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5vw;transition:var(--tr);height:74px;display:flex;align-items:center}
 nav.sc{background:rgba(250,247,242,.93);backdrop-filter:blur(20px);border-bottom:1px solid rgba(200,168,130,.18);box-shadow:0 4px 32px rgba(58,46,40,.06)}
 .nav-in{width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{display:none}
-.nav-logo-txt{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--dark);letter-spacing:.02em;line-height:1}
-.nav-logo-txt em{font-style:italic;color:var(--sand)}
+.nav-logo{height:44px;width:auto;object-fit:contain}
+.nav-logo-txt{display:none}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--sand);transition:width .3s}
@@ -252,9 +251,8 @@ section{padding:100px 5vw;position:relative}
 /* FOOTER */
 footer{background:var(--dark);padding:48px 5vw}
 .fi2{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
-.flogo{display:none}
-.flogo-txt{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.02em}
-.flogo-txt em{font-style:italic;color:var(--sand)}
+.flogo{height:40px;width:auto;object-fit:contain;opacity:.7}
+.flogo-txt{display:none}
 .fcopy{font-size:13px;color:rgba(255,255,255,.3)}
 .flinks{display:flex;gap:24px}
 .flinks a{font-size:13px;color:rgba(255,255,255,.3);transition:color .3s}
@@ -325,7 +323,7 @@ footer{background:var(--dark);padding:48px 5vw}
 
 <nav id="nav">
   <div class="nav-in">
-    <a href="#hero" class="nav-logo-txt">Dr. <em>Secu</em></a>
+    <a href="#hero"><img src="images/logo.png" alt="Dr. Secu" class="nav-logo"/></a>
     <ul class="nav-links">
       <li><a href="#about" data-i18n="na">Despre Mine</a></li>
       <li><a href="#services" data-i18n="ns">Servicii</a></li>
@@ -381,9 +379,9 @@ footer{background:var(--dark);padding:48px 5vw}
   </div>
   <div class="hvisual">
     <div class="hanim">
-      <img src="images/anmatie sarcina transparent.svg" alt="Sarcina animatie"/>
+      <img src="images/hero.png" alt="Sarcina animatie"/>
       <div class="hpill">
-        <img src="images/Gheorghe Secu Doctor.png" alt="Dr. Secu"/>
+        <img src="images/doctor.png" alt="Dr. Secu"/>
         <div><strong>Dr. Secu Gheorghe</strong><span data-i18n="pt2">Obstetrician-Ginecolog · NHS UK</span></div>
       </div>
     </div>
@@ -396,7 +394,7 @@ footer{background:var(--dark);padding:48px 5vw}
       <div class="apw rvl">
         <div class="aph1"></div>
         <div class="apf">
-          <img src="images/Gheorghe Secu Doctor.png" alt="Dr. Secu Gheorghe"/>
+          <img src="images/doctor.png" alt="Dr. Secu Gheorghe"/>
           <div class="atag"><strong>Dr. Secu Gheorghe</strong><span>Obstetrician-Ginecolog</span></div>
         </div>
         <div class="aph2"></div>
@@ -435,7 +433,7 @@ footer{background:var(--dark);padding:48px 5vw}
 <section id="journey">
   <div class="ct">
     <div class="ji">
-      <div class="rvl jv"><img src="images/linie cronologica sarcina.svg" alt="Parcursul sarcinii"/></div>
+      <div class="rvl jv"><img src="images/timeline.png" alt="Parcursul sarcinii"/></div>
       <div class="rvr">
         <div class="sl" data-i18n="jl">Parcurs</div>
         <h2 class="st" data-i18n="jt">Trei trimestre,<br><em>un singur drum</em></h2>
@@ -541,7 +539,7 @@ footer{background:var(--dark);padding:48px 5vw}
 
 <footer>
   <div class="fi2">
-    <span class="flogo-txt">Dr. <em>Secu</em></span>
+    <img src="images/logo.png" alt="Dr. Secu" class="flogo"/>
     <div class="fcopy" data-i18n="ftc">© 2025 Dr. Secu Gheorghe. Toate drepturile rezervate.</div>
     <div class="flinks"><a href="#" id="priv-link" data-i18n="ftp">Confidențialitate</a></div>
     <div class="fsoc">
