@@ -100,36 +100,44 @@ nav.sc{background:rgba(250,247,242,.93);backdrop-filter:blur(20px);border-bottom
 .tmsg.err{border-left-color:#e07070}
 
 /* HERO */
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 5vw 60px;gap:60px;position:relative;background:var(--cream)}
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 400px;position:relative;background:var(--cream);overflow:hidden}
+
+/* Illustration — left, behind text */
+.hero-illu{position:absolute;left:0;top:0;width:54%;height:100%;pointer-events:none;z-index:0;display:flex;align-items:center}
+.hero-illu img{width:100%;height:100%;object-fit:contain;object-position:left center;opacity:.85;animation:flt 9s ease-in-out infinite}
+@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* Ambient blobs */
 .hbc{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
-.hcnt{position:relative;z-index:1}
-.hvisual{position:relative;z-index:1}
-.hbc1{width:700px;height:700px;background:radial-gradient(circle,rgba(201,150,142,.18),transparent 70%);top:-200px;right:-200px;animation:dA 12s ease-in-out infinite}
-.hbc2{width:500px;height:500px;background:radial-gradient(circle,rgba(200,168,130,.14),transparent 70%);bottom:-150px;left:-100px;animation:dB 16s ease-in-out infinite}
-.hbc3{width:300px;height:300px;background:radial-gradient(circle,rgba(240,224,220,.4),transparent 70%);top:40%;left:30%;animation:dA 20s ease-in-out infinite reverse}
-@keyframes dA{0%,100%{transform:translate(0,0)}33%{transform:translate(30px,-20px)}66%{transform:translate(-20px,30px)}}
-@keyframes dB{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,20px)}}
-.hcnt{position:relative;z-index:1}
-.h-ey{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--sand);margin-bottom:28px}
-.h-ey::before,.h-ey::after{content:'';flex:1;height:1px;background:var(--sand);opacity:.5;width:24px}
-.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(50px,6vw,80px);font-weight:300;line-height:1.08;color:var(--dark);margin-bottom:28px;letter-spacing:-.01em}
+.hbc1{width:600px;height:600px;background:radial-gradient(circle,rgba(201,150,142,.15),transparent 70%);top:-200px;left:-100px;animation:dA 14s ease-in-out infinite}
+.hbc2{width:400px;height:400px;background:radial-gradient(circle,rgba(200,168,130,.12),transparent 70%);bottom:-100px;left:30%;animation:dB 18s ease-in-out infinite}
+@keyframes dA{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-20px)}}
+@keyframes dB{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,20px)}}
+
+/* Text — overlaps illustration */
+.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:120px 60px 80px 8vw}
+.h-ey{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);margin-bottom:32px}
+.h-ey::before,.h-ey::after{content:'';height:1px;background:var(--sand);opacity:.5;width:28px}
+.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,5.5vw,84px);font-weight:300;line-height:1.06;color:var(--dark);margin-bottom:24px;letter-spacing:-.02em}
 .h1 em{font-style:italic;color:var(--sand)}
-.h-sub{font-size:16px;color:var(--mid);line-height:1.75;max-width:440px;margin-bottom:44px}
-.h-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.h-sub{font-size:16px;color:var(--mid);line-height:1.8;max-width:400px;margin-bottom:40px}
+.h-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn-s{display:inline-flex;align-items:center;gap:10px;background:var(--sand);color:var(--white);padding:15px 32px;border-radius:40px;font-size:14px;font-weight:600;letter-spacing:.04em;transition:var(--tr);border:none}
 .btn-s:hover{background:var(--sand-dk);transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,168,130,.4)}
 .btn-g{display:inline-flex;align-items:center;gap:8px;color:var(--dark);font-size:14px;font-weight:500;padding:15px 0;border-bottom:1px solid var(--cream3);transition:var(--tr)}
 .btn-g:hover{color:var(--sand);border-color:var(--sand)}
-.h-badges{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
-.h-badge{background:rgba(200,168,130,.1);border:1px solid rgba(200,168,130,.25);border-radius:20px;padding:7px 14px;font-size:12px;color:var(--mid);font-weight:500}
-.hvisual{display:flex;align-items:center;justify-content:center}
-.hanim{position:relative;width:100%;max-width:520px;margin:0 auto}
-.hanim img{width:100%;height:auto;max-height:72vh;object-fit:contain;animation:flt 8s ease-in-out infinite;filter:drop-shadow(0 24px 48px rgba(200,168,130,.25))}
-@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
-.hpill{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);background:var(--white);border:1px solid rgba(200,168,130,.3);border-radius:40px;padding:12px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(58,46,40,.08);white-space:nowrap}
-.hpill img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top center;border:2px solid rgba(200,168,130,.2)}
-.hpill strong{display:block;font-size:13px;font-weight:600;color:var(--dark)}
-.hpill span{font-size:11px;color:var(--light);letter-spacing:.04em}
+.h-badges{display:flex;gap:10px;margin-top:36px;flex-wrap:wrap}
+.h-badge{background:rgba(250,247,242,.85);backdrop-filter:blur(8px);border:1px solid rgba(200,168,130,.3);border-radius:20px;padding:7px 14px;font-size:12px;color:var(--mid);font-weight:500}
+
+/* Doctor photo — right, full height branding */
+.hero-doc{position:relative;z-index:1;overflow:hidden;background:var(--cream2)}
+.hero-doc::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(58,46,40,.55) 100%);z-index:1}
+.hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.hero-doc-info{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:32px 28px;text-align:center}
+.hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#fff;letter-spacing:.02em;margin-bottom:6px}
+.hero-doc-title{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.hero-doc-badge{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:rgba(200,168,130,.25);backdrop-filter:blur(8px);border:1px solid rgba(200,168,130,.4);border-radius:20px;padding:7px 16px;font-size:11px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.06em;text-transform:uppercase}
+.hero-doc-line{width:40px;height:1px;background:rgba(200,168,130,.6);margin:16px auto 0}
 
 /* SECTIONS */
 section{padding:100px 5vw;position:relative}
@@ -270,9 +278,10 @@ footer{background:var(--dark);padding:48px 5vw}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-  #hero{grid-template-columns:1fr;text-align:center;gap:40px}
-  .hcnt{order:1}.hvisual{order:2}
-  .h-sub,.h-btns,.h-badges{margin-left:auto;margin-right:auto;justify-content:center}
+  #hero{grid-template-columns:1fr;min-height:auto}
+  .hero-doc{height:60vw;max-height:480px}
+  .hero-illu{width:70%;opacity:.5}
+  .hcnt{padding:120px 5vw 60px}
   .ag{grid-template-columns:1fr;gap:40px}
   .apf{max-width:380px;margin:0 auto}
   .sg{grid-template-columns:repeat(2,1fr)}
@@ -282,6 +291,9 @@ footer{background:var(--dark);padding:48px 5vw}
 @media(max-width:768px){
   section{padding:72px 5vw}
   .nav-links{display:none}.ham{display:flex}
+  .hero-illu{display:none}
+  .hero-doc{height:70vw}
+  .hcnt{padding:100px 5vw 48px}
   .sg{grid-template-columns:1fr}
   .tg{grid-template-columns:1fr}
   #mobcta{display:block}
@@ -291,8 +303,9 @@ footer{background:var(--dark);padding:48px 5vw}
   .fi2{flex-direction:column;text-align:center}
 }
 @media(max-width:480px){
-  .h-btns{flex-direction:column;align-items:center}
-  .h1{font-size:42px}
+  .h-btns{flex-direction:column;align-items:stretch}
+  .h1{font-size:44px}
+  .hero-doc{height:80vw}
 }
 </style>
 </head>
@@ -355,10 +368,22 @@ footer{background:var(--dark);padding:48px 5vw}
 </div>
 
 <section id="hero">
-  <div class="hbc hbc1"></div><div class="hbc hbc2"></div><div class="hbc hbc3"></div>
+  <!-- ambient blobs -->
+  <div class="hbc hbc1"></div>
+  <div class="hbc hbc2"></div>
+
+  <!-- Pregnant woman illustration — LEFT, behind text -->
+  <div class="hero-illu">
+    <img src="images/hero.png" alt=""/>
+  </div>
+
+  <!-- Text — overlaps illustration -->
   <div class="hcnt">
     <div class="h-ey" data-i18n="hey">Consultații Online Disponibile</div>
-    <h1 class="h1"><span data-i18n="h1a">Sarcina ta,</span><br><em data-i18n="h1b">în mâini sigure</em></h1>
+    <h1 class="h1">
+      <span data-i18n="h1a">Sarcina ta,</span><br>
+      <em data-i18n="h1b">în mâini sigure</em>
+    </h1>
     <p class="h-sub" data-i18n="hsub">Dr. Secu Gheorghe, medic obstetrician-ginecolog. Consultații profesionale online în română, rusă și engleză.</p>
     <div class="h-btns">
       <a href="#booking" class="btn-s">
@@ -377,12 +402,17 @@ footer{background:var(--dark);padding:48px 5vw}
       <span class="h-badge">NHS UK</span>
     </div>
   </div>
-  <div class="hvisual">
-    <div class="hanim">
-      <img src="images/hero.png" alt="Sarcina animatie"/>
-      <div class="hpill">
-        <img src="images/doctor.png" alt="Dr. Secu"/>
-        <div><strong>Dr. Secu Gheorghe</strong><span data-i18n="pt2">Obstetrician-Ginecolog · NHS UK</span></div>
+
+  <!-- Doctor photo — RIGHT, full height branding, static -->
+  <div class="hero-doc">
+    <img src="images/doctor.png" alt="Dr. Secu Gheorghe"/>
+    <div class="hero-doc-info">
+      <div class="hero-doc-line"></div>
+      <div class="hero-doc-name">Dr. Secu Gheorghe</div>
+      <div class="hero-doc-title" data-i18n="pt2">Obstetrician-Ginecolog · NHS UK</div>
+      <div class="hero-doc-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        <span data-i18n="hb1">Programează</span>
       </div>
     </div>
   </div>
