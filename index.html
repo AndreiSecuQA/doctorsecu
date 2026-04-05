@@ -100,43 +100,53 @@ nav.sc{background:rgba(250,247,242,.93);backdrop-filter:blur(20px);border-bottom
 .tmsg.err{border-left-color:#e07070}
 
 /* HERO */
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 400px;position:relative;background:var(--cream);overflow:hidden}
-
-/* Illustration — left, behind text */
-.hero-illu{position:absolute;left:-2%;top:0;width:58%;height:100%;pointer-events:none;z-index:0;display:flex;align-items:center}
-.hero-illu img{width:100%;height:100%;object-fit:contain;object-position:left center;opacity:.55;animation:flt 9s ease-in-out infinite;mix-blend-mode:multiply}
-@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 47%;position:relative;background:var(--cream)}
 
 /* Ambient blobs */
 .hbc{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
-.hbc1{width:600px;height:600px;background:radial-gradient(circle,rgba(201,150,142,.15),transparent 70%);top:-200px;left:-100px;animation:dA 14s ease-in-out infinite}
-.hbc2{width:400px;height:400px;background:radial-gradient(circle,rgba(200,168,130,.12),transparent 70%);bottom:-100px;left:30%;animation:dB 18s ease-in-out infinite}
+.hbc1{width:500px;height:500px;background:radial-gradient(circle,rgba(201,150,142,.1),transparent 70%);top:-120px;left:-80px;animation:dA 14s ease-in-out infinite}
+.hbc2{width:350px;height:350px;background:radial-gradient(circle,rgba(200,168,130,.09),transparent 70%);bottom:-80px;left:18%;animation:dB 18s ease-in-out infinite}
 @keyframes dA{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-20px)}}
 @keyframes dB{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,20px)}}
+@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
 
-/* Text — overlaps illustration */
-.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:140px 80px 100px 9vw;gap:0}
-.h-ey{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);margin-bottom:36px}
-.h-ey::before{content:'';height:1px;background:var(--sand);opacity:.6;width:32px}
-.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(56px,5.8vw,90px);font-weight:300;line-height:1.04;color:var(--dark);margin-bottom:28px;letter-spacing:-.025em}
+/* Text column */
+.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:140px 56px 100px 9vw;gap:0}
+.h-ey{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);margin-bottom:40px}
+.h-ey::before{content:'';height:1px;background:var(--sand);opacity:.6;width:36px}
+.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,5.4vw,84px);font-weight:300;line-height:1.06;color:var(--dark);margin-bottom:28px;letter-spacing:-.025em}
 .h1 em{font-style:italic;color:var(--sand);font-weight:300}
-.h-sub{font-size:15px;color:var(--mid);line-height:1.85;max-width:360px;margin-bottom:48px;font-weight:400}
-.h-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:48px}
-.btn-s{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:var(--white);padding:14px 28px;border-radius:40px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr);border:none}
+.h-sub{font-size:15px;color:var(--mid);line-height:1.9;max-width:380px;margin-bottom:52px;font-weight:400}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:52px}
+.btn-s{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:var(--white);padding:15px 30px;border-radius:40px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr);border:none}
 .btn-s:hover{background:var(--sand);transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,168,130,.4)}
 .btn-g{display:inline-flex;align-items:center;gap:10px;color:var(--mid);font-size:13px;font-weight:500;letter-spacing:.04em;padding:14px 0;transition:var(--tr)}
 .btn-g:hover{color:var(--sand)}
 .h-badges{display:flex;gap:8px;flex-wrap:wrap}
-.h-badge{border:1px solid rgba(200,168,130,.3);border-radius:20px;padding:6px 14px;font-size:11px;color:var(--light);font-weight:500;letter-spacing:.04em}
+.h-badge{border:1px solid rgba(200,168,130,.25);border-radius:20px;padding:7px 15px;font-size:11px;color:var(--light);font-weight:500;letter-spacing:.04em}
 
-/* Doctor photo — right, full height, no background */
-.hero-doc{position:relative;z-index:1;overflow:hidden;background:var(--cream);display:flex;flex-direction:column;justify-content:flex-end}
-.hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;mix-blend-mode:multiply}
-.hero-doc-info{position:absolute;bottom:40px;left:0;right:0;z-index:2;padding:0 32px;text-align:left}
-.hero-doc-line{width:32px;height:1px;background:var(--sand);margin-bottom:14px}
-.hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
+/* Doctor photo — right, full body, seamless transparent blend */
+.hero-doc{position:relative;z-index:1;background:var(--cream);display:flex;align-items:flex-end;justify-content:flex-end;overflow:hidden}
+.hero-doc img{height:100%;width:auto;max-width:none;object-fit:contain;object-position:bottom right;display:block;mix-blend-mode:multiply;transform-origin:bottom right}
+.hero-doc-info{position:absolute;bottom:44px;left:0;z-index:2;padding:0 36px}
+.hero-doc-line{width:28px;height:1px;background:var(--sand);margin-bottom:16px}
+.hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
 .hero-doc-title{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
-.hero-doc-badge{display:inline-flex;align-items:center;gap:6px;margin-top:16px;border:1px solid rgba(200,168,130,.4);border-radius:20px;padding:7px 16px;font-size:11px;font-weight:600;color:var(--sand);letter-spacing:.06em;text-transform:uppercase;background:rgba(250,247,242,.8);backdrop-filter:blur(8px)}
+.hero-doc-badge{display:inline-flex;align-items:center;gap:6px;margin-top:16px;border:1px solid rgba(200,168,130,.35);border-radius:20px;padding:7px 16px;font-size:11px;font-weight:600;color:var(--sand);letter-spacing:.06em;text-transform:uppercase;background:rgba(250,247,242,.85);backdrop-filter:blur(10px)}
+
+/* STATS / VISUAL SECTION */
+#stats{background:var(--cream2);padding:100px 5vw;overflow:hidden}
+.stats-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.stats-illu{position:relative;display:flex;align-items:center;justify-content:center}
+.stats-illu img{width:100%;max-width:420px;height:auto;object-fit:contain;mix-blend-mode:multiply;animation:flt 9s ease-in-out infinite}
+.stats-right{display:flex;flex-direction:column;gap:48px}
+.stats-header .sl{margin-bottom:16px}
+.stats-header .st{margin-bottom:0}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.stat-card{background:var(--white);border:1px solid var(--cream3);border-radius:var(--r);padding:28px 24px;transition:var(--tr)}
+.stat-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(58,46,40,.08);border-color:rgba(200,168,130,.3)}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:var(--sand);line-height:1;margin-bottom:8px;letter-spacing:-.02em}
+.stat-l{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
 
 /* SECTIONS */
 section{padding:100px 5vw;position:relative}
@@ -148,7 +158,7 @@ section{padding:100px 5vw;position:relative}
 
 /* ABOUT */
 #about{background:var(--cream2)}
-.ag{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.ag{display:grid;grid-template-columns:1fr 1.15fr;gap:88px;align-items:center}
 .apw{position:relative}
 .aph2{position:absolute;bottom:-24px;right:-24px;width:120px;height:120px;border-radius:50%;background:var(--rose-lt);z-index:-1}
 .aph1{position:absolute;top:-20px;left:-20px;width:80px;height:80px;border-radius:50%;background:rgba(200,168,130,.2);z-index:-1}
@@ -157,26 +167,37 @@ section{padding:100px 5vw;position:relative}
 .atag{position:absolute;bottom:24px;left:24px;background:rgba(250,247,242,.92);backdrop-filter:blur(12px);border:1px solid rgba(200,168,130,.2);border-radius:12px;padding:14px 18px}
 .atag strong{display:block;font-size:14px;font-weight:600;color:var(--dark)}
 .atag span{font-size:12px;color:var(--mid)}
-.atw{display:flex;flex-direction:column;gap:32px}
-.abio{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;line-height:1.65;color:var(--dark);font-style:italic}
-.adet{font-size:15px;color:var(--mid);line-height:1.8}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.chip{background:var(--white);border:1px solid var(--cream3);border-radius:20px;padding:8px 16px;font-size:13px;color:var(--mid);font-weight:500;display:inline-flex;align-items:center;gap:7px}
+.atw{display:flex;flex-direction:column;gap:28px}
+.abio{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:400;line-height:1.68;color:var(--dark);font-style:italic;border-left:2px solid var(--sand);padding-left:24px}
+.adet{font-size:15px;color:var(--mid);line-height:1.85}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.chip{background:var(--white);border:1px solid var(--cream3);border-radius:20px;padding:8px 16px;font-size:13px;color:var(--mid);font-weight:500;display:inline-flex;align-items:center;gap:7px;transition:var(--tr)}
+.chip:hover{border-color:var(--sand);color:var(--dark)}
 .chipdot{width:7px;height:7px;border-radius:50%;background:var(--sand);flex-shrink:0}
+.aexp{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.aexp-item{background:var(--white);border:1px solid var(--cream3);border-radius:14px;padding:20px 18px;transition:var(--tr)}
+.aexp-item:hover{border-color:rgba(200,168,130,.4);transform:translateY(-2px);box-shadow:0 8px 24px rgba(58,46,40,.07)}
+.aexp-yr{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:var(--sand);letter-spacing:.08em;margin-bottom:4px;text-transform:uppercase}
+.aexp-t{font-size:13px;font-weight:600;color:var(--dark);line-height:1.4;margin-bottom:4px}
+.aexp-pl{font-size:12px;color:var(--mid)}
 
 /* SERVICES */
 #services{background:var(--cream)}
-.svcdeco{position:absolute;right:0;top:50%;transform:translateY(-50%);width:38%;opacity:.06;pointer-events:none}
-.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
-.sc2{background:var(--white);border:1px solid var(--cream3);border-radius:var(--r);padding:36px 28px;transition:var(--tr);position:relative;overflow:hidden}
+.svcdeco{position:absolute;right:0;top:50%;transform:translateY(-50%);width:38%;opacity:.05;pointer-events:none}
+.svc-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.svc-note{font-size:15px;color:var(--mid);line-height:1.8;max-width:380px;align-self:end}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sc2{background:var(--white);border:1px solid var(--cream3);border-radius:var(--r);padding:36px 28px;transition:var(--tr);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:0}
 .sc2::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--sand),var(--rose));opacity:0;transition:var(--tr)}
 .sc2:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(58,46,40,.1);border-color:transparent}
 .sc2:hover::before{opacity:1}
-.sc2:hover .snum,.sc2:hover h3,.sc2:hover p{color:#fff!important}
+.sc2:hover .snum,.sc2:hover .sico,.sc2:hover h3,.sc2:hover p,.sc2:hover .smore{color:#fff!important;border-color:rgba(255,255,255,.3)!important}
 .sc2:hover .snum{background:rgba(255,255,255,.15)!important}
-.snum{position:relative;z-index:1;width:36px;height:36px;border-radius:50%;background:var(--cream2);font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--sand);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:var(--tr)}
-.sc2 h3{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--dark);margin-bottom:12px;transition:var(--tr)}
-.sc2 p{position:relative;z-index:1;font-size:14px;color:var(--mid);line-height:1.7;transition:var(--tr)}
+.sico{position:relative;z-index:1;width:44px;height:44px;border-radius:12px;background:var(--cream2);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:var(--tr);color:var(--sand)}
+.snum{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;color:var(--light);letter-spacing:.12em;margin-bottom:10px;transition:var(--tr)}
+.sc2 h3{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;color:var(--dark);margin-bottom:12px;transition:var(--tr)}
+.sc2 p{position:relative;z-index:1;font-size:14px;color:var(--mid);line-height:1.72;transition:var(--tr);flex:1}
+.smore{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sand);transition:var(--tr)}
 
 /* JOURNEY */
 #journey{background:var(--cream2);overflow:hidden}
@@ -278,23 +299,27 @@ footer{background:var(--dark);padding:48px 5vw}
 /* RESPONSIVE */
 @media(max-width:1024px){
   #hero{grid-template-columns:1fr;min-height:auto}
-  .hero-doc{height:60vw;max-height:480px}
-  .hero-illu{width:70%;opacity:.5}
+  .hero-doc{height:65vw;max-height:520px}
+  .hero-doc img{width:100%;height:100%;object-position:top center}
   .hcnt{padding:120px 5vw 60px}
   .ag{grid-template-columns:1fr;gap:40px}
   .apf{max-width:380px;margin:0 auto}
   .sg{grid-template-columns:repeat(2,1fr)}
+  .svc-intro{grid-template-columns:1fr;gap:16px;margin-bottom:40px}
   .ji{grid-template-columns:1fr;gap:40px}
   .bg{grid-template-columns:1fr;gap:40px}
+  .stats-wrap{grid-template-columns:1fr;gap:40px}
+  .stats-illu{max-height:340px;overflow:hidden}
 }
 @media(max-width:768px){
   section{padding:72px 5vw}
+  #stats{padding:72px 5vw}
   .nav-links{display:none}.ham{display:flex}
-  .hero-illu{display:none}
-  .hero-doc{height:70vw}
+  .hero-doc{height:72vw}
   .hcnt{padding:100px 5vw 48px}
   .sg{grid-template-columns:1fr}
   .tg{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
   #mobcta{display:block}
   #wa{bottom:84px}
   #topbtn{bottom:84px;right:88px}
@@ -303,8 +328,9 @@ footer{background:var(--dark);padding:48px 5vw}
 }
 @media(max-width:480px){
   .h-btns{flex-direction:column;align-items:stretch}
-  .h1{font-size:44px}
-  .hero-doc{height:80vw}
+  .h1{font-size:42px}
+  .hero-doc{height:85vw}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -371,12 +397,7 @@ footer{background:var(--dark);padding:48px 5vw}
   <div class="hbc hbc1"></div>
   <div class="hbc hbc2"></div>
 
-  <!-- Pregnant woman illustration — LEFT, behind text -->
-  <div class="hero-illu">
-    <img src="images/hero.png" alt=""/>
-  </div>
-
-  <!-- Text — overlaps illustration -->
+  <!-- Text column -->
   <div class="hcnt">
     <div class="h-ey" data-i18n="hey">Consultații Online Disponibile</div>
     <h1 class="h1">
@@ -439,6 +460,28 @@ footer{background:var(--dark);padding:48px 5vw}
           <span class="chip"><span class="chipdot"></span><span data-i18n="cp2">Consultații Online</span></span>
           <span class="chip"><span class="chipdot"></span><span data-i18n="cp3">3 Limbi</span></span>
         </div>
+        <div class="aexp">
+          <div class="aexp-item rv">
+            <div class="aexp-yr">2020 → prezent</div>
+            <div class="aexp-t">NHS Foundation Trust</div>
+            <div class="aexp-pl">United Kingdom</div>
+          </div>
+          <div class="aexp-item rv">
+            <div class="aexp-yr">2018 → 2020</div>
+            <div class="aexp-t" data-i18n="ax1t">Spitalul Clinic</div>
+            <div class="aexp-pl" data-i18n="ax1p">Chișinău, Moldova</div>
+          </div>
+          <div class="aexp-item rv">
+            <div class="aexp-yr">2012 → 2018</div>
+            <div class="aexp-t" data-i18n="ax2t">Facultatea Medicină</div>
+            <div class="aexp-pl">USMF N. Testemițanu</div>
+          </div>
+          <div class="aexp-item rv">
+            <div class="aexp-yr">2022 →</div>
+            <div class="aexp-t" data-i18n="ax3t">Doctorand</div>
+            <div class="aexp-pl" data-i18n="ax3p">Științe Medicale</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -447,14 +490,73 @@ footer{background:var(--dark);padding:48px 5vw}
 <section id="services">
   <div class="svcdeco"><img src="images/Sarcina, font.svg" alt="" aria-hidden="true"/></div>
   <div class="ct">
-    <div class="rv"><div class="sl" data-i18n="svl">Servicii</div><h2 class="st" data-i18n="svt">Cu ce vă pot <em>ajuta</em></h2></div>
+    <div class="svc-intro">
+      <div class="rv"><div class="sl" data-i18n="svl">Servicii</div><h2 class="st" data-i18n="svt">Cu ce vă pot <em>ajuta</em></h2></div>
+      <p class="svc-note rv" data-i18n="svnote">Fiecare consultație este personalizată, confidențială și disponibilă în trei limbi, de oriunde din lume.</p>
+    </div>
     <div class="sg">
-      <div class="sc2 rv"><div class="snum">01</div><h3 data-i18n="s1t">Monitorizarea Sarcinii</h3><p data-i18n="s1d">Îngrijire prenatală completă, ecografii, analize și ghidare pe tot parcursul sarcinii.</p></div>
-      <div class="sc2 rv"><div class="snum">02</div><h3 data-i18n="s2t">Ginecologie Generală</h3><p data-i18n="s2d">Evaluare și management ginecologic, diagnostic și tratament pentru orice afecțiune.</p></div>
-      <div class="sc2 rv"><div class="snum">03</div><h3 data-i18n="s3t">Consultație Online</h3><p data-i18n="s3d">Video-consultație profesională de oriunde în lume, la o oră convenabilă pentru tine.</p></div>
-      <div class="sc2 rv"><div class="snum">04</div><h3 data-i18n="s4t">Planificare Familială</h3><p data-i18n="s4d">Consiliere pentru concepție, metode contraceptive și sănătate reproductivă.</p></div>
-      <div class="sc2 rv"><div class="snum">05</div><h3 data-i18n="s5t">A Doua Opinie</h3><p data-i18n="s5d">Analiză independentă a diagnosticului tău, pentru o decizie medicală informată.</p></div>
-      <div class="sc2 rv"><div class="snum">06</div><h3 data-i18n="s6t">Conduita Nașterii</h3><p data-i18n="s6d">Pregătire și consiliere pentru naștere, plan personalizat și suport continuu.</p></div>
+      <div class="sc2 rv">
+        <div class="sico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 017 7c0 4-3 7-7 9-4-2-7-5-7-9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2"/></svg></div>
+        <div class="snum">01</div><h3 data-i18n="s1t">Monitorizarea Sarcinii</h3><p data-i18n="s1d">Îngrijire prenatală completă, ecografii, analize și ghidare pe tot parcursul sarcinii.</p>
+        <span class="smore">→</span>
+      </div>
+      <div class="sc2 rv">
+        <div class="sico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <div class="snum">02</div><h3 data-i18n="s2t">Ginecologie Generală</h3><p data-i18n="s2d">Evaluare și management ginecologic, diagnostic și tratament pentru orice afecțiune.</p>
+        <span class="smore">→</span>
+      </div>
+      <div class="sc2 rv">
+        <div class="sico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div class="snum">03</div><h3 data-i18n="s3t">Consultație Online</h3><p data-i18n="s3d">Video-consultație profesională de oriunde în lume, la o oră convenabilă pentru tine.</p>
+        <span class="smore">→</span>
+      </div>
+      <div class="sc2 rv">
+        <div class="sico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="snum">04</div><h3 data-i18n="s4t">Planificare Familială</h3><p data-i18n="s4d">Consiliere pentru concepție, metode contraceptive și sănătate reproductivă.</p>
+        <span class="smore">→</span>
+      </div>
+      <div class="sc2 rv">
+        <div class="sico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="snum">05</div><h3 data-i18n="s5t">A Doua Opinie</h3><p data-i18n="s5d">Analiză independentă a diagnosticului tău, pentru o decizie medicală informată.</p>
+        <span class="smore">→</span>
+      </div>
+      <div class="sc2 rv">
+        <div class="sico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="snum">06</div><h3 data-i18n="s6t">Conduita Nașterii</h3><p data-i18n="s6d">Pregătire și consiliere pentru naștere, plan personalizat și suport continuu.</p>
+        <span class="smore">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stats">
+  <div class="stats-wrap">
+    <div class="stats-illu rvl">
+      <img src="images/hero.png" alt="Ilustrație sarcină"/>
+    </div>
+    <div class="stats-right rvr">
+      <div class="stats-header">
+        <div class="sl" data-i18n="stsl">Experiență &amp; Cifre</div>
+        <h2 class="st" data-i18n="stst">De ce să alegi <em>Dr. Secu</em></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card rv">
+          <div class="stat-n">500+</div>
+          <div class="stat-l" data-i18n="stn1">Paciente Asistate</div>
+        </div>
+        <div class="stat-card rv">
+          <div class="stat-n">5+</div>
+          <div class="stat-l" data-i18n="stn2">Ani Experiență</div>
+        </div>
+        <div class="stat-card rv">
+          <div class="stat-n">3</div>
+          <div class="stat-l" data-i18n="stn3">Limbi Disponibile</div>
+        </div>
+        <div class="stat-card rv">
+          <div class="stat-n">NHS</div>
+          <div class="stat-l" data-i18n="stn4">United Kingdom</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -581,9 +683,9 @@ footer{background:var(--dark);padding:48px 5vw}
 
 <script>
 const T={
-ro:{na:"Despre Mine",ns:"Servicii",nj:"Parcurs",nc:"Programare",hey:"Consultații Online Disponibile",h1a:"Sarcina ta,",h1b:"în mâini sigure",hsub:"Dr. Secu Gheorghe, medic obstetrician-ginecolog. Consultații profesionale online în română, rusă și engleză.",hb1:"Programează Consultație",hb2:"Află mai multe",pt2:"Obstetrician-Ginecolog · NHS UK",al:"Despre Mine",at:"Medicul care <em>ascultă</em>",ab:'"Fiecare sarcină este unică. Misiunea mea este să fiu alături de tine cu empatie, expertiză și disponibilitate."',ad:"Medic specialist obstetrician-ginecolog cu experiență în Republica Moldova și Marea Britanie. Activez în NHS UK, cu formare la USMF „Nicolae Testemițanu".",cp1:"Doctorand Științe Medicale",cp2:"Consultații Online",cp3:"3 Limbi",svl:"Servicii",svt:'Cu ce vă pot <em>ajuta</em>',s1t:"Monitorizarea Sarcinii",s1d:"Îngrijire prenatală completă, ecografii, analize și ghidare pe tot parcursul sarcinii.",s2t:"Ginecologie Generală",s2d:"Evaluare și management ginecologic, diagnostic și tratament pentru orice afecțiune.",s3t:"Consultație Online",s3d:"Video-consultație profesională de oriunde în lume, la o oră convenabilă pentru tine.",s4t:"Planificare Familială",s4d:"Consiliere pentru concepție, metode contraceptive și sănătate reproductivă.",s5t:"A Doua Opinie",s5d:"Analiză independentă a diagnosticului tău, pentru o decizie medicală informată.",s6t:"Conduita Nașterii",s6d:"Pregătire și consiliere pentru naștere, plan personalizat și suport continuu.",jl:"Parcurs",jt:"Trei trimestre,<br><em>un singur drum</em>",j1t:"Trimestrul I (0–12 săptămâni)",j1d:"Primele consultații, analize și ecografia de prim trimestru. Suntem alături de tine de la primul pas.",j2t:"Trimestrul II (13–27 săptămâni)",j2d:"Monitorizare continuă, ecografia morfologică și pregătirea pentru naștere.",j3t:"Trimestrul III (28–40 săptămâni)",j3d:"Monitorizare intensivă, planul de naștere și pregătire completă pentru marele moment.",tsl:"Testimoniale",tst:'Ce spun <em>pacientele</em>',faqt:'Întrebări <em>frecvente</em>',f1q:"Cum funcționează consultația online?",f1a:"Prin video-call (WhatsApp, Zoom sau altă platformă), la o oră stabilită împreună.",f2q:"Cât durează o consultație?",f2a:"O consultație standard durează 30–45 minute. Cazuri complexe — până la 60 de minute.",f3q:"Ce documente să pregătesc?",f3a:"Analize recente, ecografii, bilete de externare. O listă personalizată vă va fi trimisă la confirmare.",f4q:"Consultația este confidențială?",f4a:"Absolut. Toate consultațiile respectă normele GDPR și codul etic medical.",f5q:"În ce limbi sunt disponibile?",f5a:"Română, rusă și engleză.",f6q:"Este posibilă o consultație de urgență?",f6a:"Da, în limita disponibilității. WhatsApp: +447 7934 999473.",bkl:"Programare",bkt:'Hai să <em>vorbim</em>',bks:"Completează formularul și te vom contacta în maxim 24 ore.",ffn:"Prenume",fln:"Nume",fem:"Email",fph:"Telefon / WhatsApp",fsv:"Tipul Consultației",fms:"Mesaj",fnote:"🔒 Datele dvs. sunt confidențiale și protejate conform GDPR.",fsub:"Trimite Solicitarea",pfn:"Maria",pln:"Popescu",pms:"Descrieți pe scurt motivul consultației...",ss:"Selectează...",er1:"Câmp obligatoriu",er2:"Email invalid",er3:"Minim 10 caractere",okh:"Mulțumim!",okp:"Vă vom contacta în maxim 24 ore.",ctl:"Contact",ctt:'Găsiți-mă <em>oriunde</em>',ftc:"© 2025 Dr. Secu Gheorghe. Toate drepturile rezervate.",ftp:"Confidențialitate",cta_mob:"Programează Consultație",ck_txt:"Folosim cookie-uri pentru a îmbunătăți experiența dvs.",ckok:"Accept",ckno:"Refuz",pt:"Politică de Confidențialitate",pb:"<h4>Responsabil</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Date colectate</h4><p>Nume, email, telefon și informații medicale furnizate voluntar.</p><h4>Scop</h4><p>Consultații medicale online și comunicare cu pacienții.</p><h4>Drepturi</h4><p>Acces, rectificare, ștergere. Contact: secugheorghe95@gmail.com</p>"},
-en:{na:"About Me",ns:"Services",nj:"Journey",nc:"Appointment",hey:"Online Consultations Available",h1a:"Your pregnancy,",h1b:"in safe hands",hsub:"Dr. Secu Gheorghe, specialist obstetrician-gynecologist. Professional online consultations in Romanian, Russian and English.",hb1:"Book a Consultation",hb2:"Learn more",pt2:"Obstetrician-Gynecologist · NHS UK",al:"About Me",at:"The doctor who <em>listens</em>",ab:'"Every pregnancy is unique. My mission is to be by your side with empathy, expertise and availability."',ad:"Specialist obstetrician-gynecologist with experience in Moldova and the United Kingdom. Currently working in NHS UK.",cp1:"PhD Candidate",cp2:"Online Consultations",cp3:"3 Languages",svl:"Services",svt:'How I can <em>help you</em>',s1t:"Pregnancy Monitoring",s1d:"Complete prenatal care, ultrasounds, blood tests and guidance throughout your pregnancy.",s2t:"General Gynecology",s2d:"Full gynecological evaluation, diagnosis and treatment for any condition.",s3t:"Online Consultation",s3d:"Professional video consultation from anywhere in the world, at a time convenient for you.",s4t:"Family Planning",s4d:"Counseling on conception, contraception and reproductive health.",s5t:"Second Opinion",s5d:"Independent analysis of your diagnosis for an informed medical decision.",s6t:"Delivery Management",s6d:"Preparation and counseling for childbirth, personalized plan and continuous support.",jl:"Journey",jt:"Three trimesters,<br><em>one path</em>",j1t:"Trimester I (0–12 weeks)",j1d:"First consultations, blood tests and first trimester ultrasound. We're with you from the very first step.",j2t:"Trimester II (13–27 weeks)",j2d:"Continuous monitoring, morphology scan and preparation for childbirth.",j3t:"Trimester III (28–40 weeks)",j3d:"Intensive monitoring, birth plan and complete preparation for the big moment.",tsl:"Testimonials",tst:'What <em>patients say</em>',faqt:'Frequently Asked <em>Questions</em>',f1q:"How does online consultation work?",f1a:"Via video call (WhatsApp, Zoom or another platform), at a mutually agreed time.",f2q:"How long does a consultation last?",f2a:"A standard consultation lasts 30–45 minutes. Complex cases — up to 60 minutes.",f3q:"What documents should I prepare?",f3a:"Recent blood tests, ultrasounds, discharge summaries. A personalized list will be sent upon confirmation.",f4q:"Is the consultation confidential?",f4a:"Absolutely. All consultations comply with GDPR and medical ethics.",f5q:"What languages are available?",f5a:"Romanian, Russian and English.",f6q:"Is emergency consultation possible?",f6a:"Yes, subject to availability. WhatsApp: +447 7934 999473.",bkl:"Appointment",bkt:'Let\'s <em>talk</em>',bks:"Fill in the form and we'll contact you within 24 hours to confirm.",ffn:"First Name",fln:"Last Name",fem:"Email",fph:"Phone / WhatsApp",fsv:"Consultation Type",fms:"Message",fnote:"🔒 Your data is confidential and protected under GDPR.",fsub:"Send Request",pfn:"Maria",pln:"Smith",pms:"Briefly describe the reason for the consultation...",ss:"Select...",er1:"Required field",er2:"Invalid email",er3:"Minimum 10 characters",okh:"Thank you!",okp:"We'll contact you within 24 hours.",ctl:"Contact",ctt:'Find me <em>anywhere</em>',ftc:"© 2025 Dr. Secu Gheorghe. All rights reserved.",ftp:"Privacy Policy",cta_mob:"Book Consultation",ck_txt:"We use cookies to improve your experience.",ckok:"Accept",ckno:"Decline",pt:"Privacy Policy",pb:"<h4>Data Controller</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Data Collected</h4><p>Name, email, phone and medical information voluntarily provided.</p><h4>Purpose</h4><p>Online medical consultations and patient communication.</p><h4>Your Rights</h4><p>Access, rectification, erasure. Contact: secugheorghe95@gmail.com</p>"},
-ru:{na:"Обо мне",ns:"Услуги",nj:"Путь",nc:"Запись",hey:"Онлайн-консультации доступны",h1a:"Ваша беременность,",h1b:"в надёжных руках",hsub:"Д-р Секу Георгий, врач-специалист акушер-гинеколог. Профессиональные онлайн-консультации на румынском, русском и английском.",hb1:"Записаться на консультацию",hb2:"Узнать больше",pt2:"Акушер-Гинеколог · NHS UK",al:"Обо мне",at:"Врач, который <em>слушает</em>",ab:'"Каждая беременность уникальна. Моя миссия — быть рядом с вами с эмпатией, экспертизой и доступностью."',ad:"Врач-специалист акушер-гинеколог с опытом в Молдове и Великобритании. Работаю в NHS UK.",cp1:"Аспирант",cp2:"Онлайн-консультации",cp3:"3 языка",svl:"Услуги",svt:'Чем я могу <em>помочь</em>',s1t:"Мониторинг беременности",s1d:"Полный дородовой уход, УЗИ, анализы и сопровождение на протяжении всей беременности.",s2t:"Общая гинекология",s2d:"Полная гинекологическая оценка, диагностика и лечение любого заболевания.",s3t:"Онлайн-консультация",s3d:"Профессиональная видео-консультация из любой точки мира в удобное время.",s4t:"Планирование семьи",s4d:"Консультации по зачатию, контрацепции и репродуктивному здоровью.",s5t:"Второе мнение",s5d:"Независимый анализ диагноза для обоснованного медицинского решения.",s6t:"Ведение родов",s6d:"Подготовка и консультации к родам, индивидуальный план и постоянная поддержка.",jl:"Путь",jt:"Три триместра,<br><em>один путь</em>",j1t:"Триместр I (0–12 недель)",j1d:"Первые консультации, анализы и УЗИ первого триместра. Мы с вами с первого шага.",j2t:"Триместр II (13–27 недель)",j2d:"Непрерывный мониторинг, морфологическое УЗИ и подготовка к родам.",j3t:"Триместр III (28–40 недель)",j3d:"Интенсивный мониторинг, план родов и полная подготовка к главному моменту.",tsl:"Отзывы",tst:'Что говорят <em>пациентки</em>',faqt:'Частые <em>вопросы</em>',f1q:"Как проходит онлайн-консультация?",f1a:"По видеосвязи (WhatsApp, Zoom или другой платформе) в согласованное время.",f2q:"Сколько длится консультация?",f2a:"Стандартная — 30–45 минут. Сложные случаи — до 60 минут.",f3q:"Какие документы подготовить?",f3a:"Анализы крови, УЗИ, выписки. Персонализированный список пришлём при подтверждении.",f4q:"Конфиденциальна ли консультация?",f4a:"Абсолютно. Все консультации соответствуют GDPR и медицинской этике.",f5q:"На каких языках доступны консультации?",f5a:"Румынский, русский и английский.",f6q:"Возможна ли экстренная консультация?",f6a:"Да, при наличии времени. WhatsApp: +447 7934 999473.",bkl:"Запись",bkt:'Давайте <em>поговорим</em>',bks:"Заполните форму и мы свяжемся с вами в течение 24 часов.",ffn:"Имя",fln:"Фамилия",fem:"Электронная почта",fph:"Телефон / WhatsApp",fsv:"Тип консультации",fms:"Сообщение",fnote:"🔒 Ваши данные конфиденциальны и защищены в соответствии с GDPR.",fsub:"Отправить запрос",pfn:"Мария",pln:"Иванова",pms:"Кратко опишите причину консультации...",ss:"Выберите...",er1:"Обязательное поле",er2:"Неверный email",er3:"Минимум 10 символов",okh:"Спасибо!",okp:"Мы свяжемся с вами в течение 24 часов.",ctl:"Контакт",ctt:'Найдите меня <em>везде</em>',ftc:"© 2025 Д-р Секу Георгий. Все права защищены.",ftp:"Конфиденциальность",cta_mob:"Записаться на консультацию",ck_txt:"Мы используем файлы cookie для улучшения вашего опыта.",ckok:"Принять",ckno:"Отклонить",pt:"Политика конфиденциальности",pb:"<h4>Ответственный</h4><p>Д-р Секу Георгий — secugheorghe95@gmail.com</p><h4>Данные</h4><p>Имя, email, телефон и медицинская информация, предоставленные добровольно.</p><h4>Цель</h4><p>Онлайн-медицинские консультации и общение с пациентами.</p><h4>Права</h4><p>Доступ, исправление, удаление. Контакт: secugheorghe95@gmail.com</p>"}
+ro:{na:"Despre Mine",ns:"Servicii",nj:"Parcurs",nc:"Programare",stsl:"Experiență & Cifre",stst:'De ce să alegi <em>Dr. Secu</em>',stn1:"Paciente Asistate",stn2:"Ani Experiență",stn3:"Limbi Disponibile",stn4:"United Kingdom",hey:"Consultații Online Disponibile",h1a:"Sarcina ta,",h1b:"în mâini sigure",hsub:"Dr. Secu Gheorghe, medic obstetrician-ginecolog. Consultații profesionale online în română, rusă și engleză.",hb1:"Programează Consultație",hb2:"Află mai multe",pt2:"Obstetrician-Ginecolog · NHS UK",al:"Despre Mine",at:"Medicul care <em>ascultă</em>",ab:'"Fiecare sarcină este unică. Misiunea mea este să fiu alături de tine cu empatie, expertiză și disponibilitate."',ad:"Medic specialist obstetrician-ginecolog cu experiență în Republica Moldova și Marea Britanie. Activez în NHS UK, cu formare la USMF „Nicolae Testemițanu".",cp1:"Doctorand Științe Medicale",cp2:"Consultații Online",cp3:"3 Limbi",ax1t:"Medic Specialist",ax1p:"Chișinău, Moldova",ax2t:"Facultatea Medicină",ax3t:"Doctorand",ax3p:"Științe Medicale",svl:"Servicii",svt:'Cu ce vă pot <em>ajuta</em>',svnote:"Fiecare consultație este personalizată, confidențială și disponibilă în trei limbi, de oriunde din lume.",s1t:"Monitorizarea Sarcinii",s1d:"Îngrijire prenatală completă, ecografii, analize și ghidare pe tot parcursul sarcinii.",s2t:"Ginecologie Generală",s2d:"Evaluare și management ginecologic, diagnostic și tratament pentru orice afecțiune.",s3t:"Consultație Online",s3d:"Video-consultație profesională de oriunde în lume, la o oră convenabilă pentru tine.",s4t:"Planificare Familială",s4d:"Consiliere pentru concepție, metode contraceptive și sănătate reproductivă.",s5t:"A Doua Opinie",s5d:"Analiză independentă a diagnosticului tău, pentru o decizie medicală informată.",s6t:"Conduita Nașterii",s6d:"Pregătire și consiliere pentru naștere, plan personalizat și suport continuu.",jl:"Parcurs",jt:"Trei trimestre,<br><em>un singur drum</em>",j1t:"Trimestrul I (0–12 săptămâni)",j1d:"Primele consultații, analize și ecografia de prim trimestru. Suntem alături de tine de la primul pas.",j2t:"Trimestrul II (13–27 săptămâni)",j2d:"Monitorizare continuă, ecografia morfologică și pregătirea pentru naștere.",j3t:"Trimestrul III (28–40 săptămâni)",j3d:"Monitorizare intensivă, planul de naștere și pregătire completă pentru marele moment.",tsl:"Testimoniale",tst:'Ce spun <em>pacientele</em>',faqt:'Întrebări <em>frecvente</em>',f1q:"Cum funcționează consultația online?",f1a:"Prin video-call (WhatsApp, Zoom sau altă platformă), la o oră stabilită împreună.",f2q:"Cât durează o consultație?",f2a:"O consultație standard durează 30–45 minute. Cazuri complexe — până la 60 de minute.",f3q:"Ce documente să pregătesc?",f3a:"Analize recente, ecografii, bilete de externare. O listă personalizată vă va fi trimisă la confirmare.",f4q:"Consultația este confidențială?",f4a:"Absolut. Toate consultațiile respectă normele GDPR și codul etic medical.",f5q:"În ce limbi sunt disponibile?",f5a:"Română, rusă și engleză.",f6q:"Este posibilă o consultație de urgență?",f6a:"Da, în limita disponibilității. WhatsApp: +447 7934 999473.",bkl:"Programare",bkt:'Hai să <em>vorbim</em>',bks:"Completează formularul și te vom contacta în maxim 24 ore.",ffn:"Prenume",fln:"Nume",fem:"Email",fph:"Telefon / WhatsApp",fsv:"Tipul Consultației",fms:"Mesaj",fnote:"🔒 Datele dvs. sunt confidențiale și protejate conform GDPR.",fsub:"Trimite Solicitarea",pfn:"Maria",pln:"Popescu",pms:"Descrieți pe scurt motivul consultației...",ss:"Selectează...",er1:"Câmp obligatoriu",er2:"Email invalid",er3:"Minim 10 caractere",okh:"Mulțumim!",okp:"Vă vom contacta în maxim 24 ore.",ctl:"Contact",ctt:'Găsiți-mă <em>oriunde</em>',ftc:"© 2025 Dr. Secu Gheorghe. Toate drepturile rezervate.",ftp:"Confidențialitate",cta_mob:"Programează Consultație",ck_txt:"Folosim cookie-uri pentru a îmbunătăți experiența dvs.",ckok:"Accept",ckno:"Refuz",pt:"Politică de Confidențialitate",pb:"<h4>Responsabil</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Date colectate</h4><p>Nume, email, telefon și informații medicale furnizate voluntar.</p><h4>Scop</h4><p>Consultații medicale online și comunicare cu pacienții.</p><h4>Drepturi</h4><p>Acces, rectificare, ștergere. Contact: secugheorghe95@gmail.com</p>"},
+en:{na:"About Me",ns:"Services",nj:"Journey",nc:"Appointment",stsl:"Experience & Numbers",stst:'Why choose <em>Dr. Secu</em>',stn1:"Patients Assisted",stn2:"Years Experience",stn3:"Languages Available",stn4:"United Kingdom",hey:"Online Consultations Available",h1a:"Your pregnancy,",h1b:"in safe hands",hsub:"Dr. Secu Gheorghe, specialist obstetrician-gynecologist. Professional online consultations in Romanian, Russian and English.",hb1:"Book a Consultation",hb2:"Learn more",pt2:"Obstetrician-Gynecologist · NHS UK",al:"About Me",at:"The doctor who <em>listens</em>",ab:'"Every pregnancy is unique. My mission is to be by your side with empathy, expertise and availability."',ad:"Specialist obstetrician-gynecologist with experience in Moldova and the United Kingdom. Currently working in NHS UK.",cp1:"PhD Candidate",cp2:"Online Consultations",cp3:"3 Languages",ax1t:"Specialist Doctor",ax1p:"Chisinau, Moldova",ax2t:"Faculty of Medicine",ax3t:"PhD Student",ax3p:"Medical Sciences",svl:"Services",svt:'How I can <em>help you</em>',svnote:"Every consultation is personalized, confidential and available in three languages, from anywhere in the world.",s1t:"Pregnancy Monitoring",s1d:"Complete prenatal care, ultrasounds, blood tests and guidance throughout your pregnancy.",s2t:"General Gynecology",s2d:"Full gynecological evaluation, diagnosis and treatment for any condition.",s3t:"Online Consultation",s3d:"Professional video consultation from anywhere in the world, at a time convenient for you.",s4t:"Family Planning",s4d:"Counseling on conception, contraception and reproductive health.",s5t:"Second Opinion",s5d:"Independent analysis of your diagnosis for an informed medical decision.",s6t:"Delivery Management",s6d:"Preparation and counseling for childbirth, personalized plan and continuous support.",jl:"Journey",jt:"Three trimesters,<br><em>one path</em>",j1t:"Trimester I (0–12 weeks)",j1d:"First consultations, blood tests and first trimester ultrasound. We're with you from the very first step.",j2t:"Trimester II (13–27 weeks)",j2d:"Continuous monitoring, morphology scan and preparation for childbirth.",j3t:"Trimester III (28–40 weeks)",j3d:"Intensive monitoring, birth plan and complete preparation for the big moment.",tsl:"Testimonials",tst:'What <em>patients say</em>',faqt:'Frequently Asked <em>Questions</em>',f1q:"How does online consultation work?",f1a:"Via video call (WhatsApp, Zoom or another platform), at a mutually agreed time.",f2q:"How long does a consultation last?",f2a:"A standard consultation lasts 30–45 minutes. Complex cases — up to 60 minutes.",f3q:"What documents should I prepare?",f3a:"Recent blood tests, ultrasounds, discharge summaries. A personalized list will be sent upon confirmation.",f4q:"Is the consultation confidential?",f4a:"Absolutely. All consultations comply with GDPR and medical ethics.",f5q:"What languages are available?",f5a:"Romanian, Russian and English.",f6q:"Is emergency consultation possible?",f6a:"Yes, subject to availability. WhatsApp: +447 7934 999473.",bkl:"Appointment",bkt:'Let\'s <em>talk</em>',bks:"Fill in the form and we'll contact you within 24 hours to confirm.",ffn:"First Name",fln:"Last Name",fem:"Email",fph:"Phone / WhatsApp",fsv:"Consultation Type",fms:"Message",fnote:"🔒 Your data is confidential and protected under GDPR.",fsub:"Send Request",pfn:"Maria",pln:"Smith",pms:"Briefly describe the reason for the consultation...",ss:"Select...",er1:"Required field",er2:"Invalid email",er3:"Minimum 10 characters",okh:"Thank you!",okp:"We'll contact you within 24 hours.",ctl:"Contact",ctt:'Find me <em>anywhere</em>',ftc:"© 2025 Dr. Secu Gheorghe. All rights reserved.",ftp:"Privacy Policy",cta_mob:"Book Consultation",ck_txt:"We use cookies to improve your experience.",ckok:"Accept",ckno:"Decline",pt:"Privacy Policy",pb:"<h4>Data Controller</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Data Collected</h4><p>Name, email, phone and medical information voluntarily provided.</p><h4>Purpose</h4><p>Online medical consultations and patient communication.</p><h4>Your Rights</h4><p>Access, rectification, erasure. Contact: secugheorghe95@gmail.com</p>"},
+ru:{na:"Обо мне",ns:"Услуги",nj:"Путь",nc:"Запись",stsl:"Опыт & Цифры",stst:'Почему <em>Д-р Секу</em>',stn1:"Пациенток Принято",stn2:"Лет Опыта",stn3:"Языка Доступно",stn4:"United Kingdom",hey:"Онлайн-консультации доступны",h1a:"Ваша беременность,",h1b:"в надёжных руках",hsub:"Д-р Секу Георгий, врач-специалист акушер-гинеколог. Профессиональные онлайн-консультации на румынском, русском и английском.",hb1:"Записаться на консультацию",hb2:"Узнать больше",pt2:"Акушер-Гинеколог · NHS UK",al:"Обо мне",at:"Врач, который <em>слушает</em>",ab:'"Каждая беременность уникальна. Моя миссия — быть рядом с вами с эмпатией, экспертизой и доступностью."',ad:"Врач-специалист акушер-гинеколог с опытом в Молдове и Великобритании. Работаю в NHS UK.",cp1:"Аспирант",cp2:"Онлайн-консультации",cp3:"3 языка",ax1t:"Врач-специалист",ax1p:"Кишинёв, Молдова",ax2t:"Медицинский факультет",ax3t:"Аспирант",ax3p:"Медицинские науки",svl:"Услуги",svt:'Чем я могу <em>помочь</em>',svnote:"Каждая консультация персонализирована, конфиденциальна и доступна на трёх языках из любой точки мира.",s1t:"Мониторинг беременности",s1d:"Полный дородовой уход, УЗИ, анализы и сопровождение на протяжении всей беременности.",s2t:"Общая гинекология",s2d:"Полная гинекологическая оценка, диагностика и лечение любого заболевания.",s3t:"Онлайн-консультация",s3d:"Профессиональная видео-консультация из любой точки мира в удобное время.",s4t:"Планирование семьи",s4d:"Консультации по зачатию, контрацепции и репродуктивному здоровью.",s5t:"Второе мнение",s5d:"Независимый анализ диагноза для обоснованного медицинского решения.",s6t:"Ведение родов",s6d:"Подготовка и консультации к родам, индивидуальный план и постоянная поддержка.",jl:"Путь",jt:"Три триместра,<br><em>один путь</em>",j1t:"Триместр I (0–12 недель)",j1d:"Первые консультации, анализы и УЗИ первого триместра. Мы с вами с первого шага.",j2t:"Триместр II (13–27 недель)",j2d:"Непрерывный мониторинг, морфологическое УЗИ и подготовка к родам.",j3t:"Триместр III (28–40 недель)",j3d:"Интенсивный мониторинг, план родов и полная подготовка к главному моменту.",tsl:"Отзывы",tst:'Что говорят <em>пациентки</em>',faqt:'Частые <em>вопросы</em>',f1q:"Как проходит онлайн-консультация?",f1a:"По видеосвязи (WhatsApp, Zoom или другой платформе) в согласованное время.",f2q:"Сколько длится консультация?",f2a:"Стандартная — 30–45 минут. Сложные случаи — до 60 минут.",f3q:"Какие документы подготовить?",f3a:"Анализы крови, УЗИ, выписки. Персонализированный список пришлём при подтверждении.",f4q:"Конфиденциальна ли консультация?",f4a:"Абсолютно. Все консультации соответствуют GDPR и медицинской этике.",f5q:"На каких языках доступны консультации?",f5a:"Румынский, русский и английский.",f6q:"Возможна ли экстренная консультация?",f6a:"Да, при наличии времени. WhatsApp: +447 7934 999473.",bkl:"Запись",bkt:'Давайте <em>поговорим</em>',bks:"Заполните форму и мы свяжемся с вами в течение 24 часов.",ffn:"Имя",fln:"Фамилия",fem:"Электронная почта",fph:"Телефон / WhatsApp",fsv:"Тип консультации",fms:"Сообщение",fnote:"🔒 Ваши данные конфиденциальны и защищены в соответствии с GDPR.",fsub:"Отправить запрос",pfn:"Мария",pln:"Иванова",pms:"Кратко опишите причину консультации...",ss:"Выберите...",er1:"Обязательное поле",er2:"Неверный email",er3:"Минимум 10 символов",okh:"Спасибо!",okp:"Мы свяжемся с вами в течение 24 часов.",ctl:"Контакт",ctt:'Найдите меня <em>везде</em>',ftc:"© 2025 Д-р Секу Георгий. Все права защищены.",ftp:"Конфиденциальность",cta_mob:"Записаться на консультацию",ck_txt:"Мы используем файлы cookie для улучшения вашего опыта.",ckok:"Принять",ckno:"Отклонить",pt:"Политика конфиденциальности",pb:"<h4>Ответственный</h4><p>Д-р Секу Георгий — secugheorghe95@gmail.com</p><h4>Данные</h4><p>Имя, email, телефон и медицинская информация, предоставленные добровольно.</p><h4>Цель</h4><p>Онлайн-медицинские консультации и общение с пациентами.</p><h4>Права</h4><p>Доступ, исправление, удаление. Контакт: secugheorghe95@gmail.com</p>"}
 };
 let lg=localStorage.getItem('lg')||'ro';
 function applyL(l){
@@ -594,7 +696,7 @@ function applyL(l){
   document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.dataset.i18nHtml;if(t[k]!=null)el.innerHTML=t[k];});
   document.querySelectorAll('[data-iph]').forEach(el=>{const k=el.dataset.iph;if(t[k]!=null)el.placeholder=t[k];});
   // innerHTML fields (sections with em tags)
-  ['at','svt','jt','tst','faqt','bkt','ctt'].forEach(k=>{
+  ['at','svt','jt','tst','faqt','bkt','ctt','stst'].forEach(k=>{
     document.querySelectorAll('[data-i18n="'+k+'"]').forEach(el=>{if(t[k])el.innerHTML=t[k];});
   });
   document.querySelectorAll('.lb').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
