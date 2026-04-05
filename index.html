@@ -122,6 +122,13 @@ nav.sc{background:rgba(250,247,242,.93);backdrop-filter:blur(20px);border-bottom
 .btn-s:hover{background:var(--sand);transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,168,130,.4)}
 .btn-g{display:inline-flex;align-items:center;gap:10px;color:var(--mid);font-size:13px;font-weight:500;letter-spacing:.04em;padding:14px 0;transition:var(--tr)}
 .btn-g:hover{color:var(--sand)}
+/* Doctor identity block in hero text column */
+.h-id{margin-bottom:40px}
+.h-id-line{width:40px;height:1.5px;background:var(--sand);margin-bottom:18px;opacity:.7}
+.h-id-name{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,2.4vw,36px);font-weight:400;color:var(--dark);letter-spacing:-.01em;margin-bottom:6px}
+.h-id-title{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:20px}
+.h-id-btn{display:inline-flex;align-items:center;gap:9px;border:1.5px solid var(--sand);border-radius:40px;padding:11px 22px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);transition:var(--tr)}
+.h-id-btn:hover{background:var(--sand);color:#fff;box-shadow:0 8px 24px rgba(200,168,130,.3)}
 .h-timeline{margin-top:44px;opacity:.82;transition:opacity .4s}.h-timeline:hover{opacity:1}
 .h-timeline img{width:100%;max-width:420px;height:auto;display:block;mix-blend-mode:multiply;filter:contrast(.95)}
 .h-badge{border:1px solid rgba(200,168,130,.25);border-radius:20px;padding:7px 15px;font-size:11px;color:var(--light);font-weight:500;letter-spacing:.04em}
@@ -458,7 +465,15 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 
   <!-- Text column -->
   <div class="hcnt">
-    <div class="h-ey" data-i18n="hey">Consultații Online Disponibile</div>
+    <div class="h-id">
+      <div class="h-id-line"></div>
+      <div class="h-id-name">Dr. Secu Gheorghe</div>
+      <div class="h-id-title" data-i18n="pt2">Obstetrician-Ginecolog · NHS UK</div>
+      <a href="#booking" class="h-id-btn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 18.92z"/></svg>
+        <span data-i18n="hb1">Programează Consultație</span>
+      </a>
+    </div>
     <h1 class="h1">
       <span data-i18n="h1a">Sarcina ta,</span><br>
       <em data-i18n="h1b">în mâini sigure</em>
@@ -482,15 +497,6 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   <!-- Doctor photo — RIGHT, full height branding, static -->
   <div class="hero-doc">
     <img src="images/doctor.png" alt="Dr. Secu Gheorghe"/>
-    <div class="hero-doc-info">
-      <div class="hero-doc-line"></div>
-      <div class="hero-doc-name">Dr. Secu Gheorghe</div>
-      <div class="hero-doc-title" data-i18n="pt2">Obstetrician-Ginecolog · NHS UK</div>
-      <div class="hero-doc-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        <span data-i18n="hb1">Programează</span>
-      </div>
-    </div>
   </div>
 </section>
 
