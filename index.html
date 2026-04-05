@@ -201,37 +201,56 @@ section{padding:100px 5vw;position:relative}
 
 /* JOURNEY */
 #journey{background:var(--cream2);overflow:hidden}
-.ji{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.jv img{width:100%;height:auto;object-fit:contain;border-radius:var(--r)}
-.jsteps{display:flex;flex-direction:column;gap:40px}
-.jst{display:grid;grid-template-columns:60px 1fr;gap:20px;align-items:start}
-.jnum{width:52px;height:52px;border-radius:50%;border:1px solid var(--sand);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--sand);flex-shrink:0;background:var(--white)}
-.jst h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--dark);margin-bottom:8px}
-.jst p{font-size:14px;color:var(--mid);line-height:1.7}
+.ji{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
+.jv{position:relative}
+.jv img{width:100%;height:auto;object-fit:contain;border-radius:var(--r);mix-blend-mode:multiply}
+.jv-badge{position:absolute;bottom:-16px;right:-16px;background:var(--sand);color:#fff;border-radius:14px;padding:16px 20px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 8px 24px rgba(200,168,130,.4)}
+.jsteps{display:flex;flex-direction:column;gap:0}
+.jst{display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:start;padding:32px 0;border-bottom:1px solid var(--cream3);position:relative}
+.jst:last-child{border-bottom:none}
+.jst:hover .jnum{background:var(--sand);border-color:var(--sand);color:#fff}
+.jnum{width:52px;height:52px;border-radius:50%;border:1px solid rgba(200,168,130,.4);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--sand);flex-shrink:0;background:var(--white);transition:var(--tr)}
+.jst h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--dark);margin-bottom:10px}
+.jst p{font-size:14px;color:var(--mid);line-height:1.75}
+.jst-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.jst-tag{font-size:11px;font-weight:600;color:var(--light);background:var(--cream3);border-radius:10px;padding:4px 10px;letter-spacing:.04em}
 
 /* TESTIMONIALS */
 #testi{background:var(--cream)}
-.tg{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px}
-.tc{background:var(--white);border:1px solid var(--cream3);border-radius:var(--r);padding:36px;position:relative}
-.tdeco{position:absolute;top:24px;right:24px;font-family:'Cormorant Garamond',serif;font-size:80px;line-height:1;color:var(--cream3);pointer-events:none}
-.tstars{font-size:13px;letter-spacing:4px;color:var(--sand);margin-bottom:20px}
-.tq{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;font-style:italic;color:var(--dark);line-height:1.65;margin-bottom:24px}
+.testi-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px;margin-bottom:56px}
+.testi-rating{text-align:right}
+.trating-n{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--dark);line-height:1}
+.trating-s{font-size:13px;letter-spacing:3px;color:var(--sand);margin:4px 0}
+.trating-l{font-size:12px;color:var(--light)}
+.tg{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tc{background:var(--white);border:1px solid var(--cream3);border-radius:var(--r);padding:36px;position:relative;transition:var(--tr)}
+.tc:hover{border-color:rgba(200,168,130,.35);box-shadow:0 12px 40px rgba(58,46,40,.07);transform:translateY(-3px)}
+.tc.feat{grid-column:span 2;background:linear-gradient(135deg,rgba(200,168,130,.06),rgba(201,150,142,.06));border-color:rgba(200,168,130,.25)}
+.tdeco{position:absolute;top:20px;right:24px;font-family:'Cormorant Garamond',serif;font-size:72px;line-height:1;color:var(--cream3);pointer-events:none}
+.tstars{font-size:12px;letter-spacing:4px;color:var(--sand);margin-bottom:18px}
+.tq{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;font-style:italic;color:var(--dark);line-height:1.68;margin-bottom:24px}
+.tc.feat .tq{font-size:22px}
 .tau{display:flex;align-items:center;gap:12px}
-.tav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--sand),var(--rose));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;flex-shrink:0}
+.tav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--sand),var(--rose));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;flex-shrink:0}
 .tn{font-size:14px;font-weight:600;color:var(--dark)}
 .tl{font-size:12px;color:var(--light)}
 
 /* FAQ */
-#faq{background:var(--cream2)}
-.fw{max-width:720px;margin:56px auto 0}
+#faq{background:var(--cream)}
+.faq-wrap{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;margin-top:0}
+.faq-left{position:sticky;top:100px}
+.faq-left .ss{margin-top:20px;margin-bottom:32px}
+.faq-cta{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:#fff;padding:14px 26px;border-radius:40px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr)}
+.faq-cta:hover{background:var(--sand);transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,168,130,.4)}
+.fw{margin:0}
 .fi{border-bottom:1px solid var(--cream3)}
-.fq{display:flex;justify-content:space-between;align-items:center;padding:24px 0;cursor:pointer;gap:20px;user-select:none}
-.fq span{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--dark);transition:color .3s}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:26px 0;cursor:pointer;gap:20px;user-select:none}
+.fq span{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--dark);transition:color .3s;line-height:1.3}
 .fq:hover span{color:var(--sand)}
 .ficon{width:32px;height:32px;border-radius:50%;border:1px solid var(--cream3);display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:14px;flex-shrink:0;transition:var(--tr)}
 .fi.open .ficon{background:var(--sand);border-color:var(--sand);color:#fff;transform:rotate(45deg)}
-.fa{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1),padding .3s;font-size:15px;color:var(--mid);line-height:1.8;padding:0}
-.fi.open .fa{max-height:200px;padding-bottom:24px}
+.fa{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1),padding .3s;font-size:15px;color:var(--mid);line-height:1.85;padding:0}
+.fi.open .fa{max-height:300px;padding-bottom:28px}
 
 /* BOOKING */
 #booking{background:var(--dark);position:relative;overflow:hidden}
@@ -306,6 +325,8 @@ footer{background:var(--dark);padding:48px 5vw}
   .apf{max-width:380px;margin:0 auto}
   .sg{grid-template-columns:repeat(2,1fr)}
   .svc-intro{grid-template-columns:1fr;gap:16px;margin-bottom:40px}
+  .faq-wrap{grid-template-columns:1fr;gap:40px}
+  .faq-left{position:static}
   .ji{grid-template-columns:1fr;gap:40px}
   .bg{grid-template-columns:1fr;gap:40px}
   .stats-wrap{grid-template-columns:1fr;gap:40px}
@@ -319,6 +340,9 @@ footer{background:var(--dark);padding:48px 5vw}
   .hcnt{padding:100px 5vw 48px}
   .sg{grid-template-columns:1fr}
   .tg{grid-template-columns:1fr}
+  .tc.feat{grid-column:span 1}
+  .testi-head{grid-template-columns:1fr;gap:16px}
+  .testi-rating{text-align:left}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   #mobcta{display:block}
   #wa{bottom:84px}
@@ -564,14 +588,50 @@ footer{background:var(--dark);padding:48px 5vw}
 <section id="journey">
   <div class="ct">
     <div class="ji">
-      <div class="rvl jv"><img src="images/timeline.png" alt="Parcursul sarcinii"/></div>
+      <div class="rvl jv">
+        <img src="images/timeline.png" alt="Parcursul sarcinii"/>
+        <div class="jv-badge">40 săptămâni →</div>
+      </div>
       <div class="rvr">
         <div class="sl" data-i18n="jl">Parcurs</div>
         <h2 class="st" data-i18n="jt">Trei trimestre,<br><em>un singur drum</em></h2>
         <div class="jsteps">
-          <div class="jst"><div class="jnum">I</div><div><h4 data-i18n="j1t">Trimestrul I</h4><p data-i18n="j1d">Primele consultații, analize și ecografia de prim trimestru. Suntem alături de tine de la primul pas.</p></div></div>
-          <div class="jst"><div class="jnum">II</div><div><h4 data-i18n="j2t">Trimestrul II</h4><p data-i18n="j2d">Monitorizare continuă, ecografia morfologică și pregătirea pentru naștere.</p></div></div>
-          <div class="jst"><div class="jnum">III</div><div><h4 data-i18n="j3t">Trimestrul III</h4><p data-i18n="j3d">Monitorizare intensivă, planul de naștere și pregătire completă pentru marele moment.</p></div></div>
+          <div class="jst">
+            <div class="jnum">I</div>
+            <div>
+              <h4 data-i18n="j1t">Trimestrul I (0–12 săptămâni)</h4>
+              <p data-i18n="j1d">Primele consultații, analize și ecografia de prim trimestru. Suntem alături de tine de la primul pas.</p>
+              <div class="jst-tags">
+                <span class="jst-tag">Ecografie T1</span>
+                <span class="jst-tag">Analize</span>
+                <span class="jst-tag">Consiliere</span>
+              </div>
+            </div>
+          </div>
+          <div class="jst">
+            <div class="jnum">II</div>
+            <div>
+              <h4 data-i18n="j2t">Trimestrul II (13–27 săptămâni)</h4>
+              <p data-i18n="j2d">Monitorizare continuă, ecografia morfologică și pregătirea pentru naștere.</p>
+              <div class="jst-tags">
+                <span class="jst-tag">Eco morfologică</span>
+                <span class="jst-tag">Monitorizare</span>
+                <span class="jst-tag">Nutriție</span>
+              </div>
+            </div>
+          </div>
+          <div class="jst">
+            <div class="jnum">III</div>
+            <div>
+              <h4 data-i18n="j3t">Trimestrul III (28–40 săptămâni)</h4>
+              <p data-i18n="j3d">Monitorizare intensivă, planul de naștere și pregătire completă pentru marele moment.</p>
+              <div class="jst-tags">
+                <span class="jst-tag">Plan naștere</span>
+                <span class="jst-tag">Pregătire</span>
+                <span class="jst-tag">Suport 24/7</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -580,26 +640,44 @@ footer{background:var(--dark);padding:48px 5vw}
 
 <section id="testi">
   <div class="ct">
-    <div class="rv" style="text-align:center"><div class="sl" data-i18n="tsl">Testimoniale</div><h2 class="st" data-i18n="tst">Ce spun <em>pacientele</em></h2></div>
+    <div class="testi-head">
+      <div class="rv"><div class="sl" data-i18n="tsl">Testimoniale</div><h2 class="st" data-i18n="tst">Ce spun <em>pacientele</em></h2></div>
+      <div class="testi-rating rv">
+        <div class="trating-n">5.0</div>
+        <div class="trating-s">★★★★★</div>
+        <div class="trating-l" data-i18n="trate">Evaluare medie · 50+ recenzii</div>
+      </div>
+    </div>
     <div class="tg">
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Dr. Secu mi-a însoțit întreaga sarcină cu profesionalism și căldură. Am simțit că sunt pe mâini bune de la prima consultație."</p><div class="tau"><div class="tav">EM</div><div><div class="tn">Elena M.</div><div class="tl">Chișinău, Moldova</div></div></div></div>
+      <div class="tc feat rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Dr. Secu mi-a însoțit întreaga sarcină cu profesionalism și căldură. Am simțit că sunt pe mâini bune de la prima consultație. Un medic excepțional care explică tot cu răbdare și empatie."</p><div class="tau"><div class="tav">EM</div><div><div class="tn">Elena M.</div><div class="tl">Chișinău, Moldova</div></div></div></div>
       <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"I consulted Dr. Secu online from London. He was thorough, empathetic and explained everything clearly. Highly recommended!"</p><div class="tau"><div class="tav">MD</div><div><div class="tn">Maria D.</div><div class="tl">London, UK</div></div></div></div>
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Am apelat pentru o a doua opinie și am primit claritate, empatie și un plan medical solid."</p><div class="tau"><div class="tav">NP</div><div><div class="tn">Natalia P.</div><div class="tl">București, România</div></div></div></div>
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Очень профессиональная онлайн-консультация на русском языке. Рекомендую всем!"</p><div class="tau"><div class="tav">АК</div><div><div class="tn">Анна К.</div><div class="tl">Москва, Россия</div></div></div></div>
+      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Am apelat pentru o a doua opinie și am primit claritate, empatie și un plan medical solid. Recomand cu toată inima."</p><div class="tau"><div class="tav">NP</div><div><div class="tn">Natalia P.</div><div class="tl">București, România</div></div></div></div>
+      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Очень профессиональная консультация на русском языке. Доктор внимательный и всё объяснил подробно. Рекомендую!"</p><div class="tau"><div class="tav">АК</div><div><div class="tn">Анна К.</div><div class="tl">Москва, Россия</div></div></div></div>
+      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Consultație impecabilă online. Profesionist, empatic și disponibil. Mi-a răspuns la toate întrebările despre sarcina mea cu multă răbdare."</p><div class="tau"><div class="tav">IA</div><div><div class="tn">Ioana A.</div><div class="tl">Cluj-Napoca, România</div></div></div></div>
+      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Dr. Secu is available, professional and speaks excellent English. The online format was convenient and the advice was spot on."</p><div class="tau"><div class="tav">SR</div><div><div class="tn">Sarah R.</div><div class="tl">Manchester, UK</div></div></div></div>
     </div>
   </div>
 </section>
 
 <section id="faq">
   <div class="ct">
-    <div class="rv" style="text-align:center"><div class="sl">FAQ</div><h2 class="st" data-i18n="faqt">Întrebări <em>frecvente</em></h2></div>
-    <div class="fw">
-      <div class="fi rv"><div class="fq"><span data-i18n="f1q">Cum funcționează consultația online?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f1a">Prin video-call (WhatsApp, Zoom sau altă platformă), la o oră stabilită împreună.</div></div>
-      <div class="fi rv"><div class="fq"><span data-i18n="f2q">Cât durează o consultație?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f2a">O consultație standard durează 30–45 minute. Cazuri complexe — până la 60 de minute.</div></div>
-      <div class="fi rv"><div class="fq"><span data-i18n="f3q">Ce documente să pregătesc?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f3a">Analize recente, ecografii, bilete de externare. O listă personalizată vă va fi trimisă la confirmare.</div></div>
-      <div class="fi rv"><div class="fq"><span data-i18n="f4q">Consultația este confidențială?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f4a">Absolut. Toate consultațiile respectă normele GDPR și codul etic medical.</div></div>
-      <div class="fi rv"><div class="fq"><span data-i18n="f5q">În ce limbi sunt disponibile consultațiile?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f5a">Română, rusă și engleză.</div></div>
-      <div class="fi rv"><div class="fq"><span data-i18n="f6q">Este posibilă o consultație de urgență?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f6a">Da, în limita disponibilității. WhatsApp: +447 7934 999473.</div></div>
+    <div class="faq-wrap">
+      <div class="faq-left rvl">
+        <div class="sl">FAQ</div>
+        <h2 class="st" data-i18n="faqt">Întrebări <em>frecvente</em></h2>
+        <p class="ss" data-i18n="faqs">Nu ai găsit răspunsul căutat? Scrie-mi direct și îți răspund în cel mai scurt timp.</p>
+        <a href="#booking" class="faq-cta" data-i18n="hb1">Programează Consultație</a>
+      </div>
+      <div class="rvr">
+        <div class="fw">
+          <div class="fi"><div class="fq"><span data-i18n="f1q">Cum funcționează consultația online?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f1a">Prin video-call (WhatsApp, Zoom sau altă platformă), la o oră stabilită împreună.</div></div>
+          <div class="fi"><div class="fq"><span data-i18n="f2q">Cât durează o consultație?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f2a">O consultație standard durează 30–45 minute. Cazuri complexe — până la 60 de minute.</div></div>
+          <div class="fi"><div class="fq"><span data-i18n="f3q">Ce documente să pregătesc?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f3a">Analize recente, ecografii, bilete de externare. O listă personalizată vă va fi trimisă la confirmare.</div></div>
+          <div class="fi"><div class="fq"><span data-i18n="f4q">Consultația este confidențială?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f4a">Absolut. Toate consultațiile respectă normele GDPR și codul etic medical.</div></div>
+          <div class="fi"><div class="fq"><span data-i18n="f5q">În ce limbi sunt disponibile consultațiile?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f5a">Română, rusă și engleză.</div></div>
+          <div class="fi"><div class="fq"><span data-i18n="f6q">Este posibilă o consultație de urgență?</span><div class="ficon">+</div></div><div class="fa" data-i18n="f6a">Da, în limita disponibilității. WhatsApp: +447 7934 999473.</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -683,9 +761,9 @@ footer{background:var(--dark);padding:48px 5vw}
 
 <script>
 const T={
-ro:{na:"Despre Mine",ns:"Servicii",nj:"Parcurs",nc:"Programare",stsl:"Experiență & Cifre",stst:'De ce să alegi <em>Dr. Secu</em>',stn1:"Paciente Asistate",stn2:"Ani Experiență",stn3:"Limbi Disponibile",stn4:"United Kingdom",hey:"Consultații Online Disponibile",h1a:"Sarcina ta,",h1b:"în mâini sigure",hsub:"Dr. Secu Gheorghe, medic obstetrician-ginecolog. Consultații profesionale online în română, rusă și engleză.",hb1:"Programează Consultație",hb2:"Află mai multe",pt2:"Obstetrician-Ginecolog · NHS UK",al:"Despre Mine",at:"Medicul care <em>ascultă</em>",ab:'"Fiecare sarcină este unică. Misiunea mea este să fiu alături de tine cu empatie, expertiză și disponibilitate."',ad:"Medic specialist obstetrician-ginecolog cu experiență în Republica Moldova și Marea Britanie. Activez în NHS UK, cu formare la USMF „Nicolae Testemițanu".",cp1:"Doctorand Științe Medicale",cp2:"Consultații Online",cp3:"3 Limbi",ax1t:"Medic Specialist",ax1p:"Chișinău, Moldova",ax2t:"Facultatea Medicină",ax3t:"Doctorand",ax3p:"Științe Medicale",svl:"Servicii",svt:'Cu ce vă pot <em>ajuta</em>',svnote:"Fiecare consultație este personalizată, confidențială și disponibilă în trei limbi, de oriunde din lume.",s1t:"Monitorizarea Sarcinii",s1d:"Îngrijire prenatală completă, ecografii, analize și ghidare pe tot parcursul sarcinii.",s2t:"Ginecologie Generală",s2d:"Evaluare și management ginecologic, diagnostic și tratament pentru orice afecțiune.",s3t:"Consultație Online",s3d:"Video-consultație profesională de oriunde în lume, la o oră convenabilă pentru tine.",s4t:"Planificare Familială",s4d:"Consiliere pentru concepție, metode contraceptive și sănătate reproductivă.",s5t:"A Doua Opinie",s5d:"Analiză independentă a diagnosticului tău, pentru o decizie medicală informată.",s6t:"Conduita Nașterii",s6d:"Pregătire și consiliere pentru naștere, plan personalizat și suport continuu.",jl:"Parcurs",jt:"Trei trimestre,<br><em>un singur drum</em>",j1t:"Trimestrul I (0–12 săptămâni)",j1d:"Primele consultații, analize și ecografia de prim trimestru. Suntem alături de tine de la primul pas.",j2t:"Trimestrul II (13–27 săptămâni)",j2d:"Monitorizare continuă, ecografia morfologică și pregătirea pentru naștere.",j3t:"Trimestrul III (28–40 săptămâni)",j3d:"Monitorizare intensivă, planul de naștere și pregătire completă pentru marele moment.",tsl:"Testimoniale",tst:'Ce spun <em>pacientele</em>',faqt:'Întrebări <em>frecvente</em>',f1q:"Cum funcționează consultația online?",f1a:"Prin video-call (WhatsApp, Zoom sau altă platformă), la o oră stabilită împreună.",f2q:"Cât durează o consultație?",f2a:"O consultație standard durează 30–45 minute. Cazuri complexe — până la 60 de minute.",f3q:"Ce documente să pregătesc?",f3a:"Analize recente, ecografii, bilete de externare. O listă personalizată vă va fi trimisă la confirmare.",f4q:"Consultația este confidențială?",f4a:"Absolut. Toate consultațiile respectă normele GDPR și codul etic medical.",f5q:"În ce limbi sunt disponibile?",f5a:"Română, rusă și engleză.",f6q:"Este posibilă o consultație de urgență?",f6a:"Da, în limita disponibilității. WhatsApp: +447 7934 999473.",bkl:"Programare",bkt:'Hai să <em>vorbim</em>',bks:"Completează formularul și te vom contacta în maxim 24 ore.",ffn:"Prenume",fln:"Nume",fem:"Email",fph:"Telefon / WhatsApp",fsv:"Tipul Consultației",fms:"Mesaj",fnote:"🔒 Datele dvs. sunt confidențiale și protejate conform GDPR.",fsub:"Trimite Solicitarea",pfn:"Maria",pln:"Popescu",pms:"Descrieți pe scurt motivul consultației...",ss:"Selectează...",er1:"Câmp obligatoriu",er2:"Email invalid",er3:"Minim 10 caractere",okh:"Mulțumim!",okp:"Vă vom contacta în maxim 24 ore.",ctl:"Contact",ctt:'Găsiți-mă <em>oriunde</em>',ftc:"© 2025 Dr. Secu Gheorghe. Toate drepturile rezervate.",ftp:"Confidențialitate",cta_mob:"Programează Consultație",ck_txt:"Folosim cookie-uri pentru a îmbunătăți experiența dvs.",ckok:"Accept",ckno:"Refuz",pt:"Politică de Confidențialitate",pb:"<h4>Responsabil</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Date colectate</h4><p>Nume, email, telefon și informații medicale furnizate voluntar.</p><h4>Scop</h4><p>Consultații medicale online și comunicare cu pacienții.</p><h4>Drepturi</h4><p>Acces, rectificare, ștergere. Contact: secugheorghe95@gmail.com</p>"},
-en:{na:"About Me",ns:"Services",nj:"Journey",nc:"Appointment",stsl:"Experience & Numbers",stst:'Why choose <em>Dr. Secu</em>',stn1:"Patients Assisted",stn2:"Years Experience",stn3:"Languages Available",stn4:"United Kingdom",hey:"Online Consultations Available",h1a:"Your pregnancy,",h1b:"in safe hands",hsub:"Dr. Secu Gheorghe, specialist obstetrician-gynecologist. Professional online consultations in Romanian, Russian and English.",hb1:"Book a Consultation",hb2:"Learn more",pt2:"Obstetrician-Gynecologist · NHS UK",al:"About Me",at:"The doctor who <em>listens</em>",ab:'"Every pregnancy is unique. My mission is to be by your side with empathy, expertise and availability."',ad:"Specialist obstetrician-gynecologist with experience in Moldova and the United Kingdom. Currently working in NHS UK.",cp1:"PhD Candidate",cp2:"Online Consultations",cp3:"3 Languages",ax1t:"Specialist Doctor",ax1p:"Chisinau, Moldova",ax2t:"Faculty of Medicine",ax3t:"PhD Student",ax3p:"Medical Sciences",svl:"Services",svt:'How I can <em>help you</em>',svnote:"Every consultation is personalized, confidential and available in three languages, from anywhere in the world.",s1t:"Pregnancy Monitoring",s1d:"Complete prenatal care, ultrasounds, blood tests and guidance throughout your pregnancy.",s2t:"General Gynecology",s2d:"Full gynecological evaluation, diagnosis and treatment for any condition.",s3t:"Online Consultation",s3d:"Professional video consultation from anywhere in the world, at a time convenient for you.",s4t:"Family Planning",s4d:"Counseling on conception, contraception and reproductive health.",s5t:"Second Opinion",s5d:"Independent analysis of your diagnosis for an informed medical decision.",s6t:"Delivery Management",s6d:"Preparation and counseling for childbirth, personalized plan and continuous support.",jl:"Journey",jt:"Three trimesters,<br><em>one path</em>",j1t:"Trimester I (0–12 weeks)",j1d:"First consultations, blood tests and first trimester ultrasound. We're with you from the very first step.",j2t:"Trimester II (13–27 weeks)",j2d:"Continuous monitoring, morphology scan and preparation for childbirth.",j3t:"Trimester III (28–40 weeks)",j3d:"Intensive monitoring, birth plan and complete preparation for the big moment.",tsl:"Testimonials",tst:'What <em>patients say</em>',faqt:'Frequently Asked <em>Questions</em>',f1q:"How does online consultation work?",f1a:"Via video call (WhatsApp, Zoom or another platform), at a mutually agreed time.",f2q:"How long does a consultation last?",f2a:"A standard consultation lasts 30–45 minutes. Complex cases — up to 60 minutes.",f3q:"What documents should I prepare?",f3a:"Recent blood tests, ultrasounds, discharge summaries. A personalized list will be sent upon confirmation.",f4q:"Is the consultation confidential?",f4a:"Absolutely. All consultations comply with GDPR and medical ethics.",f5q:"What languages are available?",f5a:"Romanian, Russian and English.",f6q:"Is emergency consultation possible?",f6a:"Yes, subject to availability. WhatsApp: +447 7934 999473.",bkl:"Appointment",bkt:'Let\'s <em>talk</em>',bks:"Fill in the form and we'll contact you within 24 hours to confirm.",ffn:"First Name",fln:"Last Name",fem:"Email",fph:"Phone / WhatsApp",fsv:"Consultation Type",fms:"Message",fnote:"🔒 Your data is confidential and protected under GDPR.",fsub:"Send Request",pfn:"Maria",pln:"Smith",pms:"Briefly describe the reason for the consultation...",ss:"Select...",er1:"Required field",er2:"Invalid email",er3:"Minimum 10 characters",okh:"Thank you!",okp:"We'll contact you within 24 hours.",ctl:"Contact",ctt:'Find me <em>anywhere</em>',ftc:"© 2025 Dr. Secu Gheorghe. All rights reserved.",ftp:"Privacy Policy",cta_mob:"Book Consultation",ck_txt:"We use cookies to improve your experience.",ckok:"Accept",ckno:"Decline",pt:"Privacy Policy",pb:"<h4>Data Controller</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Data Collected</h4><p>Name, email, phone and medical information voluntarily provided.</p><h4>Purpose</h4><p>Online medical consultations and patient communication.</p><h4>Your Rights</h4><p>Access, rectification, erasure. Contact: secugheorghe95@gmail.com</p>"},
-ru:{na:"Обо мне",ns:"Услуги",nj:"Путь",nc:"Запись",stsl:"Опыт & Цифры",stst:'Почему <em>Д-р Секу</em>',stn1:"Пациенток Принято",stn2:"Лет Опыта",stn3:"Языка Доступно",stn4:"United Kingdom",hey:"Онлайн-консультации доступны",h1a:"Ваша беременность,",h1b:"в надёжных руках",hsub:"Д-р Секу Георгий, врач-специалист акушер-гинеколог. Профессиональные онлайн-консультации на румынском, русском и английском.",hb1:"Записаться на консультацию",hb2:"Узнать больше",pt2:"Акушер-Гинеколог · NHS UK",al:"Обо мне",at:"Врач, который <em>слушает</em>",ab:'"Каждая беременность уникальна. Моя миссия — быть рядом с вами с эмпатией, экспертизой и доступностью."',ad:"Врач-специалист акушер-гинеколог с опытом в Молдове и Великобритании. Работаю в NHS UK.",cp1:"Аспирант",cp2:"Онлайн-консультации",cp3:"3 языка",ax1t:"Врач-специалист",ax1p:"Кишинёв, Молдова",ax2t:"Медицинский факультет",ax3t:"Аспирант",ax3p:"Медицинские науки",svl:"Услуги",svt:'Чем я могу <em>помочь</em>',svnote:"Каждая консультация персонализирована, конфиденциальна и доступна на трёх языках из любой точки мира.",s1t:"Мониторинг беременности",s1d:"Полный дородовой уход, УЗИ, анализы и сопровождение на протяжении всей беременности.",s2t:"Общая гинекология",s2d:"Полная гинекологическая оценка, диагностика и лечение любого заболевания.",s3t:"Онлайн-консультация",s3d:"Профессиональная видео-консультация из любой точки мира в удобное время.",s4t:"Планирование семьи",s4d:"Консультации по зачатию, контрацепции и репродуктивному здоровью.",s5t:"Второе мнение",s5d:"Независимый анализ диагноза для обоснованного медицинского решения.",s6t:"Ведение родов",s6d:"Подготовка и консультации к родам, индивидуальный план и постоянная поддержка.",jl:"Путь",jt:"Три триместра,<br><em>один путь</em>",j1t:"Триместр I (0–12 недель)",j1d:"Первые консультации, анализы и УЗИ первого триместра. Мы с вами с первого шага.",j2t:"Триместр II (13–27 недель)",j2d:"Непрерывный мониторинг, морфологическое УЗИ и подготовка к родам.",j3t:"Триместр III (28–40 недель)",j3d:"Интенсивный мониторинг, план родов и полная подготовка к главному моменту.",tsl:"Отзывы",tst:'Что говорят <em>пациентки</em>',faqt:'Частые <em>вопросы</em>',f1q:"Как проходит онлайн-консультация?",f1a:"По видеосвязи (WhatsApp, Zoom или другой платформе) в согласованное время.",f2q:"Сколько длится консультация?",f2a:"Стандартная — 30–45 минут. Сложные случаи — до 60 минут.",f3q:"Какие документы подготовить?",f3a:"Анализы крови, УЗИ, выписки. Персонализированный список пришлём при подтверждении.",f4q:"Конфиденциальна ли консультация?",f4a:"Абсолютно. Все консультации соответствуют GDPR и медицинской этике.",f5q:"На каких языках доступны консультации?",f5a:"Румынский, русский и английский.",f6q:"Возможна ли экстренная консультация?",f6a:"Да, при наличии времени. WhatsApp: +447 7934 999473.",bkl:"Запись",bkt:'Давайте <em>поговорим</em>',bks:"Заполните форму и мы свяжемся с вами в течение 24 часов.",ffn:"Имя",fln:"Фамилия",fem:"Электронная почта",fph:"Телефон / WhatsApp",fsv:"Тип консультации",fms:"Сообщение",fnote:"🔒 Ваши данные конфиденциальны и защищены в соответствии с GDPR.",fsub:"Отправить запрос",pfn:"Мария",pln:"Иванова",pms:"Кратко опишите причину консультации...",ss:"Выберите...",er1:"Обязательное поле",er2:"Неверный email",er3:"Минимум 10 символов",okh:"Спасибо!",okp:"Мы свяжемся с вами в течение 24 часов.",ctl:"Контакт",ctt:'Найдите меня <em>везде</em>',ftc:"© 2025 Д-р Секу Георгий. Все права защищены.",ftp:"Конфиденциальность",cta_mob:"Записаться на консультацию",ck_txt:"Мы используем файлы cookie для улучшения вашего опыта.",ckok:"Принять",ckno:"Отклонить",pt:"Политика конфиденциальности",pb:"<h4>Ответственный</h4><p>Д-р Секу Георгий — secugheorghe95@gmail.com</p><h4>Данные</h4><p>Имя, email, телефон и медицинская информация, предоставленные добровольно.</p><h4>Цель</h4><p>Онлайн-медицинские консультации и общение с пациентами.</p><h4>Права</h4><p>Доступ, исправление, удаление. Контакт: secugheorghe95@gmail.com</p>"}
+ro:{na:"Despre Mine",ns:"Servicii",nj:"Parcurs",nc:"Programare",stsl:"Experiență & Cifre",stst:'De ce să alegi <em>Dr. Secu</em>',stn1:"Paciente Asistate",stn2:"Ani Experiență",stn3:"Limbi Disponibile",stn4:"United Kingdom",hey:"Consultații Online Disponibile",h1a:"Sarcina ta,",h1b:"în mâini sigure",hsub:"Dr. Secu Gheorghe, medic obstetrician-ginecolog. Consultații profesionale online în română, rusă și engleză.",hb1:"Programează Consultație",hb2:"Află mai multe",pt2:"Obstetrician-Ginecolog · NHS UK",al:"Despre Mine",at:"Medicul care <em>ascultă</em>",ab:'"Fiecare sarcină este unică. Misiunea mea este să fiu alături de tine cu empatie, expertiză și disponibilitate."',ad:"Medic specialist obstetrician-ginecolog cu experiență în Republica Moldova și Marea Britanie. Activez în NHS UK, cu formare la USMF „Nicolae Testemițanu".",cp1:"Doctorand Științe Medicale",cp2:"Consultații Online",cp3:"3 Limbi",ax1t:"Medic Specialist",ax1p:"Chișinău, Moldova",ax2t:"Facultatea Medicină",ax3t:"Doctorand",ax3p:"Științe Medicale",svl:"Servicii",svt:'Cu ce vă pot <em>ajuta</em>',svnote:"Fiecare consultație este personalizată, confidențială și disponibilă în trei limbi, de oriunde din lume.",s1t:"Monitorizarea Sarcinii",s1d:"Îngrijire prenatală completă, ecografii, analize și ghidare pe tot parcursul sarcinii.",s2t:"Ginecologie Generală",s2d:"Evaluare și management ginecologic, diagnostic și tratament pentru orice afecțiune.",s3t:"Consultație Online",s3d:"Video-consultație profesională de oriunde în lume, la o oră convenabilă pentru tine.",s4t:"Planificare Familială",s4d:"Consiliere pentru concepție, metode contraceptive și sănătate reproductivă.",s5t:"A Doua Opinie",s5d:"Analiză independentă a diagnosticului tău, pentru o decizie medicală informată.",s6t:"Conduita Nașterii",s6d:"Pregătire și consiliere pentru naștere, plan personalizat și suport continuu.",jl:"Parcurs",jt:"Trei trimestre,<br><em>un singur drum</em>",j1t:"Trimestrul I (0–12 săptămâni)",j1d:"Primele consultații, analize și ecografia de prim trimestru. Suntem alături de tine de la primul pas.",j2t:"Trimestrul II (13–27 săptămâni)",j2d:"Monitorizare continuă, ecografia morfologică și pregătirea pentru naștere.",j3t:"Trimestrul III (28–40 săptămâni)",j3d:"Monitorizare intensivă, planul de naștere și pregătire completă pentru marele moment.",tsl:"Testimoniale",tst:'Ce spun <em>pacientele</em>',trate:"Evaluare medie · 50+ recenzii",faqt:'Întrebări <em>frecvente</em>',faqs:"Nu ai găsit răspunsul căutat? Scrie-mi direct și îți răspund în cel mai scurt timp.",f1q:"Cum funcționează consultația online?",f1a:"Prin video-call (WhatsApp, Zoom sau altă platformă), la o oră stabilită împreună.",f2q:"Cât durează o consultație?",f2a:"O consultație standard durează 30–45 minute. Cazuri complexe — până la 60 de minute.",f3q:"Ce documente să pregătesc?",f3a:"Analize recente, ecografii, bilete de externare. O listă personalizată vă va fi trimisă la confirmare.",f4q:"Consultația este confidențială?",f4a:"Absolut. Toate consultațiile respectă normele GDPR și codul etic medical.",f5q:"În ce limbi sunt disponibile?",f5a:"Română, rusă și engleză.",f6q:"Este posibilă o consultație de urgență?",f6a:"Da, în limita disponibilității. WhatsApp: +447 7934 999473.",bkl:"Programare",bkt:'Hai să <em>vorbim</em>',bks:"Completează formularul și te vom contacta în maxim 24 ore.",ffn:"Prenume",fln:"Nume",fem:"Email",fph:"Telefon / WhatsApp",fsv:"Tipul Consultației",fms:"Mesaj",fnote:"🔒 Datele dvs. sunt confidențiale și protejate conform GDPR.",fsub:"Trimite Solicitarea",pfn:"Maria",pln:"Popescu",pms:"Descrieți pe scurt motivul consultației...",ss:"Selectează...",er1:"Câmp obligatoriu",er2:"Email invalid",er3:"Minim 10 caractere",okh:"Mulțumim!",okp:"Vă vom contacta în maxim 24 ore.",ctl:"Contact",ctt:'Găsiți-mă <em>oriunde</em>',ftc:"© 2025 Dr. Secu Gheorghe. Toate drepturile rezervate.",ftp:"Confidențialitate",cta_mob:"Programează Consultație",ck_txt:"Folosim cookie-uri pentru a îmbunătăți experiența dvs.",ckok:"Accept",ckno:"Refuz",pt:"Politică de Confidențialitate",pb:"<h4>Responsabil</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Date colectate</h4><p>Nume, email, telefon și informații medicale furnizate voluntar.</p><h4>Scop</h4><p>Consultații medicale online și comunicare cu pacienții.</p><h4>Drepturi</h4><p>Acces, rectificare, ștergere. Contact: secugheorghe95@gmail.com</p>"},
+en:{na:"About Me",ns:"Services",nj:"Journey",nc:"Appointment",stsl:"Experience & Numbers",stst:'Why choose <em>Dr. Secu</em>',stn1:"Patients Assisted",stn2:"Years Experience",stn3:"Languages Available",stn4:"United Kingdom",hey:"Online Consultations Available",h1a:"Your pregnancy,",h1b:"in safe hands",hsub:"Dr. Secu Gheorghe, specialist obstetrician-gynecologist. Professional online consultations in Romanian, Russian and English.",hb1:"Book a Consultation",hb2:"Learn more",pt2:"Obstetrician-Gynecologist · NHS UK",al:"About Me",at:"The doctor who <em>listens</em>",ab:'"Every pregnancy is unique. My mission is to be by your side with empathy, expertise and availability."',ad:"Specialist obstetrician-gynecologist with experience in Moldova and the United Kingdom. Currently working in NHS UK.",cp1:"PhD Candidate",cp2:"Online Consultations",cp3:"3 Languages",ax1t:"Specialist Doctor",ax1p:"Chisinau, Moldova",ax2t:"Faculty of Medicine",ax3t:"PhD Student",ax3p:"Medical Sciences",svl:"Services",svt:'How I can <em>help you</em>',svnote:"Every consultation is personalized, confidential and available in three languages, from anywhere in the world.",s1t:"Pregnancy Monitoring",s1d:"Complete prenatal care, ultrasounds, blood tests and guidance throughout your pregnancy.",s2t:"General Gynecology",s2d:"Full gynecological evaluation, diagnosis and treatment for any condition.",s3t:"Online Consultation",s3d:"Professional video consultation from anywhere in the world, at a time convenient for you.",s4t:"Family Planning",s4d:"Counseling on conception, contraception and reproductive health.",s5t:"Second Opinion",s5d:"Independent analysis of your diagnosis for an informed medical decision.",s6t:"Delivery Management",s6d:"Preparation and counseling for childbirth, personalized plan and continuous support.",jl:"Journey",jt:"Three trimesters,<br><em>one path</em>",j1t:"Trimester I (0–12 weeks)",j1d:"First consultations, blood tests and first trimester ultrasound. We're with you from the very first step.",j2t:"Trimester II (13–27 weeks)",j2d:"Continuous monitoring, morphology scan and preparation for childbirth.",j3t:"Trimester III (28–40 weeks)",j3d:"Intensive monitoring, birth plan and complete preparation for the big moment.",tsl:"Testimonials",tst:'What <em>patients say</em>',trate:"Average rating · 50+ reviews",faqt:'Frequently Asked <em>Questions</em>',faqs:"Didn't find your answer? Write to me directly and I'll respond as soon as possible.",f1q:"How does online consultation work?",f1a:"Via video call (WhatsApp, Zoom or another platform), at a mutually agreed time.",f2q:"How long does a consultation last?",f2a:"A standard consultation lasts 30–45 minutes. Complex cases — up to 60 minutes.",f3q:"What documents should I prepare?",f3a:"Recent blood tests, ultrasounds, discharge summaries. A personalized list will be sent upon confirmation.",f4q:"Is the consultation confidential?",f4a:"Absolutely. All consultations comply with GDPR and medical ethics.",f5q:"What languages are available?",f5a:"Romanian, Russian and English.",f6q:"Is emergency consultation possible?",f6a:"Yes, subject to availability. WhatsApp: +447 7934 999473.",bkl:"Appointment",bkt:'Let\'s <em>talk</em>',bks:"Fill in the form and we'll contact you within 24 hours to confirm.",ffn:"First Name",fln:"Last Name",fem:"Email",fph:"Phone / WhatsApp",fsv:"Consultation Type",fms:"Message",fnote:"🔒 Your data is confidential and protected under GDPR.",fsub:"Send Request",pfn:"Maria",pln:"Smith",pms:"Briefly describe the reason for the consultation...",ss:"Select...",er1:"Required field",er2:"Invalid email",er3:"Minimum 10 characters",okh:"Thank you!",okp:"We'll contact you within 24 hours.",ctl:"Contact",ctt:'Find me <em>anywhere</em>',ftc:"© 2025 Dr. Secu Gheorghe. All rights reserved.",ftp:"Privacy Policy",cta_mob:"Book Consultation",ck_txt:"We use cookies to improve your experience.",ckok:"Accept",ckno:"Decline",pt:"Privacy Policy",pb:"<h4>Data Controller</h4><p>Dr. Secu Gheorghe — secugheorghe95@gmail.com</p><h4>Data Collected</h4><p>Name, email, phone and medical information voluntarily provided.</p><h4>Purpose</h4><p>Online medical consultations and patient communication.</p><h4>Your Rights</h4><p>Access, rectification, erasure. Contact: secugheorghe95@gmail.com</p>"},
+ru:{na:"Обо мне",ns:"Услуги",nj:"Путь",nc:"Запись",stsl:"Опыт & Цифры",stst:'Почему <em>Д-р Секу</em>',stn1:"Пациенток Принято",stn2:"Лет Опыта",stn3:"Языка Доступно",stn4:"United Kingdom",hey:"Онлайн-консультации доступны",h1a:"Ваша беременность,",h1b:"в надёжных руках",hsub:"Д-р Секу Георгий, врач-специалист акушер-гинеколог. Профессиональные онлайн-консультации на румынском, русском и английском.",hb1:"Записаться на консультацию",hb2:"Узнать больше",pt2:"Акушер-Гинеколог · NHS UK",al:"Обо мне",at:"Врач, который <em>слушает</em>",ab:'"Каждая беременность уникальна. Моя миссия — быть рядом с вами с эмпатией, экспертизой и доступностью."',ad:"Врач-специалист акушер-гинеколог с опытом в Молдове и Великобритании. Работаю в NHS UK.",cp1:"Аспирант",cp2:"Онлайн-консультации",cp3:"3 языка",ax1t:"Врач-специалист",ax1p:"Кишинёв, Молдова",ax2t:"Медицинский факультет",ax3t:"Аспирант",ax3p:"Медицинские науки",svl:"Услуги",svt:'Чем я могу <em>помочь</em>',svnote:"Каждая консультация персонализирована, конфиденциальна и доступна на трёх языках из любой точки мира.",s1t:"Мониторинг беременности",s1d:"Полный дородовой уход, УЗИ, анализы и сопровождение на протяжении всей беременности.",s2t:"Общая гинекология",s2d:"Полная гинекологическая оценка, диагностика и лечение любого заболевания.",s3t:"Онлайн-консультация",s3d:"Профессиональная видео-консультация из любой точки мира в удобное время.",s4t:"Планирование семьи",s4d:"Консультации по зачатию, контрацепции и репродуктивному здоровью.",s5t:"Второе мнение",s5d:"Независимый анализ диагноза для обоснованного медицинского решения.",s6t:"Ведение родов",s6d:"Подготовка и консультации к родам, индивидуальный план и постоянная поддержка.",jl:"Путь",jt:"Три триместра,<br><em>один путь</em>",j1t:"Триместр I (0–12 недель)",j1d:"Первые консультации, анализы и УЗИ первого триместра. Мы с вами с первого шага.",j2t:"Триместр II (13–27 недель)",j2d:"Непрерывный мониторинг, морфологическое УЗИ и подготовка к родам.",j3t:"Триместр III (28–40 недель)",j3d:"Интенсивный мониторинг, план родов и полная подготовка к главному моменту.",tsl:"Отзывы",tst:'Что говорят <em>пациентки</em>',trate:"Средняя оценка · 50+ отзывов",faqt:'Частые <em>вопросы</em>',faqs:"Не нашли ответ? Напишите мне напрямую и я отвечу как можно скорее.",f1q:"Как проходит онлайн-консультация?",f1a:"По видеосвязи (WhatsApp, Zoom или другой платформе) в согласованное время.",f2q:"Сколько длится консультация?",f2a:"Стандартная — 30–45 минут. Сложные случаи — до 60 минут.",f3q:"Какие документы подготовить?",f3a:"Анализы крови, УЗИ, выписки. Персонализированный список пришлём при подтверждении.",f4q:"Конфиденциальна ли консультация?",f4a:"Абсолютно. Все консультации соответствуют GDPR и медицинской этике.",f5q:"На каких языках доступны консультации?",f5a:"Румынский, русский и английский.",f6q:"Возможна ли экстренная консультация?",f6a:"Да, при наличии времени. WhatsApp: +447 7934 999473.",bkl:"Запись",bkt:'Давайте <em>поговорим</em>',bks:"Заполните форму и мы свяжемся с вами в течение 24 часов.",ffn:"Имя",fln:"Фамилия",fem:"Электронная почта",fph:"Телефон / WhatsApp",fsv:"Тип консультации",fms:"Сообщение",fnote:"🔒 Ваши данные конфиденциальны и защищены в соответствии с GDPR.",fsub:"Отправить запрос",pfn:"Мария",pln:"Иванова",pms:"Кратко опишите причину консультации...",ss:"Выберите...",er1:"Обязательное поле",er2:"Неверный email",er3:"Минимум 10 символов",okh:"Спасибо!",okp:"Мы свяжемся с вами в течение 24 часов.",ctl:"Контакт",ctt:'Найдите меня <em>везде</em>',ftc:"© 2025 Д-р Секу Георгий. Все права защищены.",ftp:"Конфиденциальность",cta_mob:"Записаться на консультацию",ck_txt:"Мы используем файлы cookie для улучшения вашего опыта.",ckok:"Принять",ckno:"Отклонить",pt:"Политика конфиденциальности",pb:"<h4>Ответственный</h4><p>Д-р Секу Георгий — secugheorghe95@gmail.com</p><h4>Данные</h4><p>Имя, email, телефон и медицинская информация, предоставленные добровольно.</p><h4>Цель</h4><p>Онлайн-медицинские консультации и общение с пациентами.</p><h4>Права</h4><p>Доступ, исправление, удаление. Контакт: secugheorghe95@gmail.com</p>"}
 };
 let lg=localStorage.getItem('lg')||'ro';
 function applyL(l){
