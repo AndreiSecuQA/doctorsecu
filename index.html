@@ -150,7 +150,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .tmsg.err{border-left-color:#e07070}
 
 /* HERO */
-#hero{display:grid;grid-template-columns:1fr 47%;min-height:100vh;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%);padding:0}
+#hero{display:grid;grid-template-columns:1fr 47%;height:100vh;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%);padding:0;overflow:hidden}
 
 /* Ambient blobs */
 .hbc{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
@@ -161,7 +161,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 @keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
 
 /* Text column */
-.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;min-height:100vh;padding:clamp(90px,10vh,120px) 56px clamp(60px,7vh,80px) 9vw;gap:clamp(20px,2.6vh,32px)}
+.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;height:100%;padding:0 56px 0 9vw;gap:clamp(18px,2.4vh,28px)}
 .h-ey{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand)}
 .h-ey::before{content:'';height:1px;background:var(--sand);opacity:.6;width:36px}
 .h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,4.8vw,80px);font-weight:300;line-height:1.06;color:var(--dark);letter-spacing:-.025em}
@@ -189,8 +189,8 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .h-trust-sep{display:none}
 
 /* Doctor photo — right, full body, seamless transparent blend */
-.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;min-height:100vh}
-.hero-doc img{width:auto;height:100vh;max-width:none;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:multiply}
+.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;height:100%}
+.hero-doc img{width:auto;height:100%;max-width:none;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:multiply}
 .hero-doc-info{position:absolute;bottom:44px;left:0;z-index:2;padding:0 36px}
 .hero-doc-line{width:28px;height:1px;background:var(--sand);margin-bottom:16px}
 .hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
@@ -418,9 +418,8 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 /* RESPONSIVE */
 /* ── TABLET LANDSCAPE 1024px ── */
 @media(max-width:1024px){
-  /* Hero: restrânge coloana doctor, textul rămâne */
   #hero{grid-template-columns:1fr 42%}
-  .hcnt{padding:100px 40px 72px 6vw;gap:clamp(16px,2.8vh,34px)}
+  .hcnt{padding:0 40px 0 6vw;gap:clamp(16px,2.4vh,26px)}
   .h1{font-size:clamp(40px,4.2vw,68px)}
   /* Alte secțiuni */
   .ag{grid-template-columns:1fr;gap:40px}
@@ -442,13 +441,17 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   section{padding:72px 5vw}
   #stats{padding:72px 5vw}
   .nav-links{display:none}.ham{display:flex}
-  /* Hero: doctor sus (portrait crop), text jos */
-  #hero{grid-template-columns:1fr;height:auto}
-  .hero-doc{order:-1;height:56vw;max-height:420px}
-  .hero-doc img{height:100%;object-fit:cover;object-position:top center}
-  .hcnt{padding:44px 6vw 56px;gap:20px;text-align:left}
-  .h1{font-size:clamp(36px,7vw,54px)}
-  .h-id-name{font-size:clamp(22px,4.5vw,30px)}
+  /* Hero: full-screen stacked — doctor top, text bottom */
+  #hero{grid-template-columns:1fr;height:100svh;display:flex;flex-direction:column}
+  .hero-doc{order:-1;flex:0 0 48%;height:48%;overflow:hidden;justify-content:center;align-items:flex-end}
+  .hero-doc img{width:auto;height:100%;max-width:100%;object-fit:contain;object-position:bottom center}
+  .hcnt{flex:1;height:52%;min-height:0;padding:20px 6vw 28px;gap:14px;justify-content:center}
+  .h1{font-size:clamp(32px,7vw,50px)}
+  .h-id-name{font-size:clamp(18px,4vw,26px)}
+  .h-id-title{font-size:10px}
+  .h-sub{font-size:14px;line-height:1.75;max-width:100%}
+  .btn-s{padding:12px 22px;font-size:12px}
+  .btn-g{font-size:12px}
   /* Alte secțiuni */
   .sg{grid-template-columns:1fr}
   .tg{grid-template-columns:1fr}
@@ -468,10 +471,13 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 /* ── MOBILE 480px ── */
 @media(max-width:480px){
   /* Hero */
-  .hero-doc{height:60vw;max-height:320px}
-  .hcnt{padding:32px 5vw 48px;gap:16px}
-  .h1{font-size:clamp(34px,9vw,46px)}
-  .h-btns{flex-direction:column;align-items:stretch}
+  #hero{height:100svh}
+  .hero-doc{flex:0 0 45%;height:45%}
+  .hcnt{flex:1;height:55%;padding:16px 5vw 24px;gap:12px}
+  .h1{font-size:clamp(30px,9vw,44px)}
+  .h-id-name{font-size:clamp(17px,5vw,22px)}
+  .h-btns{gap:8px}
+  .btn-s{padding:11px 20px;font-size:12px}
   .btn-s,.btn-g{justify-content:center}
   /* Alte secțiuni */
   .stats-grid{grid-template-columns:repeat(2,1fr)}
