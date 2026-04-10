@@ -3,13 +3,48 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Dr. Secu Gheorghe – Medic Obstetrician-Ginecolog. Consultații online profesionale. Sarcina ta, în mâini sigure."/>
-<meta property="og:title" content="Dr. Secu — Obstetrician Ginecolog"/>
-<meta property="og:description" content="Sarcina ta, în mâini sigure. Consultații online în română, rusă și engleză."/>
+<meta name="description" content="Dr. Secu Gheorghe – Medic Obstetrician-Ginecolog cu experiență NHS UK. Consultații online profesionale pentru sarcină și sănătate ginecologică în română, engleză și rusă."/>
+<meta name="keywords" content="medic obstetrician ginecolog online, consultatie ginecologica online, doctor sarcina online, ginecolog romana, ginecolog NHS UK, obstetrician online, consultatie online sarcina, Dr. Secu Gheorghe"/>
+<meta name="author" content="Dr. Secu Gheorghe"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://andreisecuqa.github.io/doctorsecu/"/>
+<link rel="alternate" hreflang="ro" href="https://andreisecuqa.github.io/doctorsecu/"/>
+<link rel="alternate" hreflang="en" href="https://andreisecuqa.github.io/doctorsecu/"/>
+<link rel="alternate" hreflang="ru" href="https://andreisecuqa.github.io/doctorsecu/"/>
+<meta property="og:title" content="Dr. Secu Gheorghe — Obstetrician-Ginecolog Online | NHS UK"/>
+<meta property="og:description" content="Consultații profesioniste pentru sarcină și sănătate ginecologică, la distanță. Disponibil în română, engleză și rusă. Medic NHS UK."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://andreisecuqa.github.io/doctorsecu/"/>
+<meta property="og:image" content="https://andreisecuqa.github.io/doctorsecu/images/doctor.png"/>
+<meta property="og:locale" content="ro_RO"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<title>Dr. Secu — Obstetrician Ginecolog</title>
+<meta name="twitter:title" content="Dr. Secu Gheorghe — Obstetrician-Ginecolog Online"/>
+<meta name="twitter:description" content="Consultații profesioniste pentru sarcină și sănătate ginecologică, la distanță. NHS UK."/>
+<meta name="twitter:image" content="https://andreisecuqa.github.io/doctorsecu/images/doctor.png"/>
+<title>Dr. Secu Gheorghe — Obstetrician-Ginecolog Online | Consultații Sarcină & Ginecologie</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr. Secu Gheorghe",
+  "jobTitle": "Medic Obstetrician-Ginecolog",
+  "description": "Medic specialist obstetrician-ginecolog cu experiență în Marea Britanie (NHS) și Republica Moldova. Consultații online pentru sarcină și sănătate ginecologică în română, engleză și rusă.",
+  "url": "https://andreisecuqa.github.io/doctorsecu/",
+  "image": "https://andreisecuqa.github.io/doctorsecu/images/doctor.png",
+  "telephone": "+447793499947",
+  "email": "secugheorghe95@gmail.com",
+  "medicalSpecialty": ["Obstetrics", "Gynecology"],
+  "availableService": [
+    {"@type": "MedicalTherapy", "name": "Monitorizarea Sarcinii"},
+    {"@type": "MedicalTherapy", "name": "Ginecologie Generală"},
+    {"@type": "MedicalTherapy", "name": "Consultație Online"},
+    {"@type": "MedicalTherapy", "name": "Planificare Familială"},
+    {"@type": "MedicalTherapy", "name": "A Doua Opinie"}
+  ],
+  "knowsLanguage": ["ro", "en", "ru"],
+  "sameAs": ["https://wa.me/447793499947"]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23c8a882'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='600' fill='white'>DS</text></svg>" type="image/svg+xml"/>
 <link rel="icon" href="images/logo.png" type="image/png" sizes="any"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -115,7 +150,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .tmsg.err{border-left-color:#e07070}
 
 /* HERO */
-#hero{display:grid;grid-template-columns:1fr 47%;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%);padding:0}
+#hero{display:grid;grid-template-columns:1fr 47%;min-height:100vh;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%);padding:0}
 
 /* Ambient blobs */
 .hbc{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
@@ -126,7 +161,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 @keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
 
 /* Text column */
-.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:clamp(110px,13vh,160px) 56px clamp(60px,7vh,88px) 9vw;gap:clamp(22px,3vh,36px)}
+.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;min-height:100vh;padding:clamp(90px,10vh,120px) 56px clamp(60px,7vh,80px) 9vw;gap:clamp(20px,2.6vh,32px)}
 .h-ey{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand)}
 .h-ey::before{content:'';height:1px;background:var(--sand);opacity:.6;width:36px}
 .h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,4.8vw,80px);font-weight:300;line-height:1.06;color:var(--dark);letter-spacing:-.025em}
@@ -135,8 +170,11 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .h-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .btn-s{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:var(--white);padding:15px 30px;border-radius:40px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr);border:none}
 .btn-s:hover{background:var(--grad);transform:translateY(-2px);box-shadow:0 12px 36px rgba(200,168,130,.45)}
-.btn-g{display:inline-flex;align-items:center;gap:10px;color:var(--mid);font-size:13px;font-weight:500;letter-spacing:.04em;padding:14px 0;transition:var(--tr)}
-.btn-g:hover{color:var(--sand)}
+.btn-g{display:inline-flex;align-items:center;gap:10px;color:var(--mid);font-size:13px;font-weight:500;letter-spacing:.04em;padding:14px 0;transition:var(--tr);animation:btnGlow 3s ease-in-out infinite}
+.btn-g:hover{color:var(--sand)}.btn-g:hover svg{animation:none;transform:translateX(4px)}
+.btn-g svg{transition:transform .3s;animation:arrowBounce 1.8s ease-in-out infinite}
+@keyframes arrowBounce{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+@keyframes btnGlow{0%,100%{opacity:1}50%{opacity:.7}}
 /* Doctor identity block in hero text column */
 .h-id{}
 .h-id-line{width:40px;height:1.5px;background:var(--sand);margin-bottom:16px;opacity:.7}
@@ -151,8 +189,8 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .h-trust-sep{display:none}
 
 /* Doctor photo — right, full body, seamless transparent blend */
-.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
-.hero-doc img{width:auto;height:100%;max-height:92vh;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:multiply}
+.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;min-height:100vh}
+.hero-doc img{width:auto;height:100vh;max-width:none;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:multiply}
 .hero-doc-info{position:absolute;bottom:44px;left:0;z-index:2;padding:0 36px}
 .hero-doc-line{width:28px;height:1px;background:var(--sand);margin-bottom:16px}
 .hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
