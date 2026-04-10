@@ -112,7 +112,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .tmsg.err{border-left-color:#e07070}
 
 /* HERO */
-#hero{height:100vh;display:grid;grid-template-columns:1fr 47%;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%)}
+#hero{display:grid;grid-template-columns:1fr 47%;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%)}
 
 /* Ambient blobs */
 .hbc{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
@@ -123,7 +123,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 @keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
 
 /* Text column */
-.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:clamp(88px,11vh,136px) 56px clamp(56px,7vh,96px) 9vw;gap:clamp(10px,1.6vh,18px)}
+.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:clamp(100px,12vh,148px) 56px clamp(60px,8vh,100px) 9vw;gap:clamp(10px,1.6vh,18px);min-height:600px}
 .h-ey{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand)}
 .h-ey::before{content:'';height:1px;background:var(--sand);opacity:.6;width:36px}
 .h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,4.8vw,80px);font-weight:300;line-height:1.06;color:var(--dark);letter-spacing:-.025em}
@@ -148,8 +148,8 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .h-trust-sep{display:none}
 
 /* Doctor photo — right, full body, seamless transparent blend */
-.hero-doc{position:relative;z-index:1;background:var(--cream);overflow:hidden}
-.hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;mix-blend-mode:multiply}
+.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden;display:flex;align-items:flex-end}
+.hero-doc img{width:100%;height:auto;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:multiply}
 .hero-doc-info{position:absolute;bottom:44px;left:0;z-index:2;padding:0 36px}
 .hero-doc-line{width:28px;height:1px;background:var(--sand);margin-bottom:16px}
 .hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
@@ -221,33 +221,29 @@ section{padding:100px 5vw;position:relative}
 .sc2 p{position:relative;z-index:1;font-size:14px;color:var(--mid);line-height:1.72;transition:var(--tr);flex:1}
 .smore{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sand);transition:var(--tr)}
 
-/* JOURNEY — horizontal timeline redesign */
-#journey{background:var(--dark);overflow:hidden;position:relative}
-#journey::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(200,168,130,.07),transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(201,150,142,.06),transparent 60%);pointer-events:none}
-.jhead{text-align:center;margin-bottom:64px;position:relative;z-index:1}
+/* JOURNEY */
+#journey{background:var(--cream2);overflow:hidden;position:relative}
+.jhead{text-align:center;margin-bottom:80px;position:relative;z-index:1}
 .jhead .sl{color:var(--sand)}
-.jhead .st{color:var(--white);margin-bottom:12px}
-.jhead .ss{margin:0 auto;color:rgba(255,255,255,.45);text-align:center}
+.jhead .st{color:var(--dark);margin-bottom:12px}
+.jhead .ss{margin:0 auto;color:var(--mid);text-align:center}
 .jtl{position:relative;z-index:1}
-.jtl-track{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:0}
-/* connecting line */
-.jtl-track::before{content:'';position:absolute;top:32px;left:calc(16.666% );right:calc(16.666%);height:1px;background:linear-gradient(90deg,transparent,rgba(200,168,130,.4) 20%,rgba(200,168,130,.4) 80%,transparent);z-index:0;pointer-events:none}
-.jtl-card{background:rgba(255,255,255,.03);border:1px solid rgba(200,168,130,.1);border-radius:var(--r);padding:40px 32px;position:relative;transition:var(--tr);display:flex;flex-direction:column;gap:0}
-.jtl-card:hover{background:rgba(255,255,255,.06);border-color:rgba(200,168,130,.3);transform:translateY(-4px);box-shadow:0 24px 56px rgba(0,0,0,.2)}
-/* dot above card */
-.jtl-dot{width:14px;height:14px;border-radius:50%;background:var(--sand);border:3px solid var(--dark);box-shadow:0 0 0 1px rgba(200,168,130,.5);margin:0 auto 32px;flex-shrink:0;position:relative;z-index:1;transition:var(--tr)}
-.jtl-card:hover .jtl-dot{transform:scale(1.3);box-shadow:0 0 0 3px rgba(200,168,130,.3)}
-.jtl-wk{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,168,130,.6);margin-bottom:14px}
-.jtl-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(200,168,130,.15);line-height:1;position:absolute;top:36px;right:28px;pointer-events:none}
-.jtl-card h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;color:var(--white);margin-bottom:12px;line-height:1.3}
-.jtl-card p{font-size:14px;color:rgba(255,255,255,.45);line-height:1.8;flex:1}
-.jtl-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
-.jtl-tag{font-size:11px;font-weight:600;color:rgba(200,168,130,.7);background:rgba(200,168,130,.08);border:1px solid rgba(200,168,130,.15);border-radius:10px;padding:4px 10px;letter-spacing:.04em}
-/* CTA bar */
-.jtl-cta{display:flex;align-items:center;justify-content:center;gap:32px;margin-top:48px;padding-top:40px;border-top:1px solid rgba(200,168,130,.1)}
-.jtl-cta-txt{font-size:14px;color:rgba(255,255,255,.4)}
-.jtl-cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--sand),var(--rose));color:#fff;padding:14px 32px;border-radius:40px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr)}
-.jtl-cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(200,168,130,.5),var(--glow)}
+.jtl-track{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:56px}
+.jtl-track::before{content:'';position:absolute;top:9px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,168,130,.35) 20%,rgba(200,168,130,.35) 80%,transparent);z-index:0;pointer-events:none}
+.jtl-card{background:transparent;border:none;border-radius:0;padding:0;position:relative;z-index:1;display:flex;flex-direction:column}
+.jtl-card:hover{background:transparent;transform:none;box-shadow:none}
+.jtl-dot{width:18px;height:18px;border-radius:50%;background:var(--cream2);border:2px solid var(--sand);margin-bottom:36px;flex-shrink:0;position:relative;z-index:1;transition:var(--tr)}
+.jtl-card:hover .jtl-dot{background:var(--sand);transform:scale(1.15)}
+.jtl-num{font-family:'Cormorant Garamond',serif;font-size:88px;font-weight:300;color:rgba(200,168,130,.1);line-height:1;margin-bottom:-12px;pointer-events:none;position:static}
+.jtl-wk{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sand);margin-bottom:14px}
+.jtl-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--dark);margin-bottom:14px;line-height:1.2}
+.jtl-card p{font-size:15px;color:var(--mid);line-height:1.85;flex:1}
+.jtl-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.jtl-tag{font-size:11px;font-weight:600;color:var(--mid);background:rgba(200,168,130,.09);border:1px solid rgba(200,168,130,.2);border-radius:20px;padding:5px 14px;letter-spacing:.04em}
+.jtl-cta{display:flex;align-items:center;justify-content:center;gap:32px;margin-top:72px;padding-top:0;border-top:none}
+.jtl-cta-txt{font-size:14px;color:var(--mid)}
+.jtl-cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:#fff;padding:14px 32px;border-radius:40px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr)}
+.jtl-cta-btn:hover{background:var(--grad);transform:translateY(-2px);box-shadow:0 16px 44px rgba(200,168,130,.4)}
 
 /* TESTIMONIALS */
 #testi{background:var(--cream)}
@@ -382,7 +378,7 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 /* ── TABLET LANDSCAPE 1024px ── */
 @media(max-width:1024px){
   /* Hero: restrânge coloana doctor, textul rămâne */
-  #hero{grid-template-columns:1fr 42%;height:100vh}
+  #hero{grid-template-columns:1fr 42%}
   .hcnt{padding:100px 40px 72px 6vw;gap:clamp(16px,2.8vh,34px)}
   .h1{font-size:clamp(40px,4.2vw,68px)}
   /* Alte secțiuni */
@@ -393,6 +389,8 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   .faq-wrap{grid-template-columns:1fr;gap:40px}
   .faq-left{position:static}
   .ji{grid-template-columns:1fr;gap:40px}
+  .jtl-track{grid-template-columns:1fr;gap:40px}
+  .jtl-track::before{display:none}
   .bg{grid-template-columns:1fr;gap:40px}
   .stats-wrap{grid-template-columns:1fr;gap:40px}
   .stats-illu{max-height:340px;overflow:hidden}
@@ -404,9 +402,10 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   #stats{padding:72px 5vw}
   .nav-links{display:none}.ham{display:flex}
   /* Hero: doctor sus (portrait crop), text jos */
-  #hero{grid-template-columns:1fr;grid-template-rows:52vw 1fr;height:auto}
-  .hero-doc{order:-1;height:52vw;max-height:400px;overflow:hidden}
-  .hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center}
+  #hero{grid-template-columns:1fr;height:auto}
+  .hero-doc{order:-1;overflow:hidden}
+  .hero-doc img{width:100%;height:auto;object-fit:contain;object-position:top center;mix-blend-mode:multiply;max-height:420px}
+  .hcnt{min-height:auto}
   .hcnt{padding:44px 6vw 56px;gap:20px;text-align:left}
   .h1{font-size:clamp(36px,7vw,54px)}
   .h-id-name{font-size:clamp(22px,4.5vw,30px)}
@@ -429,8 +428,8 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 /* ── MOBILE 480px ── */
 @media(max-width:480px){
   /* Hero */
-  #hero{grid-template-rows:60vw 1fr}
-  .hero-doc{height:60vw;max-height:320px}
+  #hero{grid-template-rows:auto 1fr}
+  .hero-doc img{max-height:320px}
   .hcnt{padding:32px 5vw 48px;gap:16px}
   .h1{font-size:clamp(34px,9vw,46px)}
   .h-btns{flex-direction:column;align-items:stretch}
@@ -687,8 +686,8 @@ footer{background:var(--dark);padding:72px 5vw 40px}
       <div class="jtl-track">
         <div class="jtl-card rv">
           <div class="jtl-dot"></div>
+          <div class="jtl-num">01</div>
           <div class="jtl-wk" data-i18n="j1w">Săptămânile 0 – 12</div>
-          <div class="jtl-num">I</div>
           <h3 data-i18n="j1t">Trimestrul I</h3>
           <p data-i18n="j1d">Primele consultații, analize și ecografia de prim trimestru. Suntem alături de tine de la primul pas.</p>
           <div class="jtl-tags">
@@ -699,8 +698,8 @@ footer{background:var(--dark);padding:72px 5vw 40px}
         </div>
         <div class="jtl-card rv">
           <div class="jtl-dot"></div>
+          <div class="jtl-num">02</div>
           <div class="jtl-wk" data-i18n="j2w">Săptămânile 13 – 27</div>
-          <div class="jtl-num">II</div>
           <h3 data-i18n="j2t">Trimestrul II</h3>
           <p data-i18n="j2d">Monitorizare continuă, ecografia morfologică și pregătirea pentru naștere.</p>
           <div class="jtl-tags">
@@ -711,8 +710,8 @@ footer{background:var(--dark);padding:72px 5vw 40px}
         </div>
         <div class="jtl-card rv">
           <div class="jtl-dot"></div>
+          <div class="jtl-num">03</div>
           <div class="jtl-wk" data-i18n="j3w">Săptămânile 28 – 40</div>
-          <div class="jtl-num">III</div>
           <h3 data-i18n="j3t">Trimestrul III</h3>
           <p data-i18n="j3d">Monitorizare intensivă, planul de naștere și pregătire completă pentru marele moment.</p>
           <div class="jtl-tags">
@@ -733,26 +732,6 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   </div>
 </section>
 
-<section id="testi">
-  <div class="ct">
-    <div class="testi-head">
-      <div class="rv"><div class="sl" data-i18n="tsl">Testimoniale</div><h2 class="st" data-i18n="tst">Ce spun <em>pacientele</em></h2></div>
-      <div class="testi-rating rv">
-        <div class="trating-n">5.0</div>
-        <div class="trating-s">★★★★★</div>
-        <div class="trating-l" data-i18n="trate">Evaluare medie · 50+ recenzii</div>
-      </div>
-    </div>
-    <div class="tg">
-      <div class="tc feat rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Dr. Secu mi-a însoțit întreaga sarcină cu profesionalism și căldură. Am simțit că sunt pe mâini bune de la prima consultație. Un medic excepțional care explică tot cu răbdare și empatie."</p><div class="tau"><div class="tav">EM</div><div><div class="tn">Elena M.</div><div class="tl">Chișinău, Moldova</div></div></div></div>
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"I consulted Dr. Secu online from London. He was thorough, empathetic and explained everything clearly. Highly recommended!"</p><div class="tau"><div class="tav">MD</div><div><div class="tn">Maria D.</div><div class="tl">London, UK</div></div></div></div>
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Am apelat pentru o a doua opinie și am primit claritate, empatie și un plan medical solid. Recomand cu toată inima."</p><div class="tau"><div class="tav">NP</div><div><div class="tn">Natalia P.</div><div class="tl">București, România</div></div></div></div>
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Очень профессиональная консультация на русском языке. Доктор внимательный и всё объяснил подробно. Рекомендую!"</p><div class="tau"><div class="tav">АК</div><div><div class="tn">Анна К.</div><div class="tl">Москва, Россия</div></div></div></div>
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Consultație impecabilă online. Profesionist, empatic și disponibil. Mi-a răspuns la toate întrebările despre sarcina mea cu multă răbdare."</p><div class="tau"><div class="tav">IA</div><div><div class="tn">Ioana A.</div><div class="tl">Cluj-Napoca, România</div></div></div></div>
-      <div class="tc rv"><div class="tdeco">"</div><div class="tstars">★★★★★</div><p class="tq">"Dr. Secu is available, professional and speaks excellent English. The online format was convenient and the advice was spot on."</p><div class="tau"><div class="tav">SR</div><div><div class="tn">Sarah R.</div><div class="tl">Manchester, UK</div></div></div></div>
-    </div>
-  </div>
-</section>
 
 <section id="faq">
   <div class="ct">
