@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://andreisecuqa.github.io/doctorsecu/"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <title>Dr. Secu — Obstetrician Ginecolog</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23c8a882'/><text y='.85em' font-size='54' x='14' fill='white'>⚕</text></svg>"/>
+<link rel="icon" href="images/Logo.png" type="image/png"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -51,7 +51,9 @@ body::before{content:'';position:fixed;inset:0;
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5vw;transition:var(--tr);height:74px;display:flex;align-items:center}
 nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(200,168,130,.2);box-shadow:0 4px 32px rgba(58,46,40,.08)}
 .nav-in{width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{height:44px;width:auto;object-fit:contain}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo{height:40px;width:auto;object-fit:contain}
+.nav-logo-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--dark);letter-spacing:.02em;line-height:1}
 .nav-logo-txt{display:none}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);transition:color .3s;position:relative}
@@ -112,7 +114,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .tmsg.err{border-left-color:#e07070}
 
 /* HERO */
-#hero{display:grid;grid-template-columns:1fr 47%;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%)}
+#hero{display:grid;grid-template-columns:1fr 47%;position:relative;background:var(--cream);background-image:radial-gradient(ellipse at 10% 60%,rgba(200,168,130,.07) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(201,150,142,.05) 0%,transparent 45%);padding:0}
 
 /* Ambient blobs */
 .hbc{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
@@ -123,7 +125,7 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 @keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
 
 /* Text column */
-.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:clamp(100px,12vh,148px) 56px clamp(60px,8vh,100px) 9vw;gap:clamp(10px,1.6vh,18px);min-height:600px}
+.hcnt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:clamp(100px,12vh,148px) 56px clamp(40px,5vh,64px) 9vw;gap:clamp(10px,1.6vh,18px)}
 .h-ey{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand)}
 .h-ey::before{content:'';height:1px;background:var(--sand);opacity:.6;width:36px}
 .h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,4.8vw,80px);font-weight:300;line-height:1.06;color:var(--dark);letter-spacing:-.025em}
@@ -148,8 +150,8 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .h-trust-sep{display:none}
 
 /* Doctor photo — right, full body, seamless transparent blend */
-.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden;display:flex;align-items:flex-end}
-.hero-doc img{width:100%;height:auto;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:multiply}
+.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden}
+.hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;mix-blend-mode:multiply}
 .hero-doc-info{position:absolute;bottom:44px;left:0;z-index:2;padding:0 36px}
 .hero-doc-line{width:28px;height:1px;background:var(--sand);margin-bottom:16px}
 .hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
@@ -403,9 +405,8 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   .nav-links{display:none}.ham{display:flex}
   /* Hero: doctor sus (portrait crop), text jos */
   #hero{grid-template-columns:1fr;height:auto}
-  .hero-doc{order:-1;overflow:hidden}
-  .hero-doc img{width:100%;height:auto;object-fit:contain;object-position:top center;mix-blend-mode:multiply;max-height:420px}
-  .hcnt{min-height:auto}
+  .hero-doc{order:-1;height:56vw;max-height:420px}
+  .hero-doc img{height:100%;object-fit:cover;object-position:top center}
   .hcnt{padding:44px 6vw 56px;gap:20px;text-align:left}
   .h1{font-size:clamp(36px,7vw,54px)}
   .h-id-name{font-size:clamp(22px,4.5vw,30px)}
@@ -428,8 +429,7 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 /* ── MOBILE 480px ── */
 @media(max-width:480px){
   /* Hero */
-  #hero{grid-template-rows:auto 1fr}
-  .hero-doc img{max-height:320px}
+  .hero-doc{height:60vw;max-height:320px}
   .hcnt{padding:32px 5vw 48px;gap:16px}
   .h1{font-size:clamp(34px,9vw,46px)}
   .h-btns{flex-direction:column;align-items:stretch}
@@ -470,7 +470,7 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 
 <nav id="nav">
   <div class="nav-in">
-    <a href="#hero"><img src="images/logo.png" alt="Dr. Secu" class="nav-logo"/></a>
+    <a href="#hero" class="nav-brand"><img src="images/Logo.png" alt="Dr. Secu" class="nav-logo"/><span class="nav-logo-name">Dr. Secu</span></a>
     <ul class="nav-links">
       <li><a href="#about" data-i18n="na">Despre Mine</a></li>
       <li><a href="#services" data-i18n="ns">Servicii</a></li>
@@ -894,7 +894,7 @@ footer{background:var(--dark);padding:72px 5vw 40px}
     <div class="ft-top">
       <!-- Brand col -->
       <div class="ft-brand">
-        <img src="images/logo.png" alt="Dr. Secu" class="flogo"/>
+        <img src="images/Logo.png" alt="Dr. Secu" class="flogo"/>
         <p class="ft-tagline" data-i18n="ftag">"Sarcina ta, în mâini sigure."</p>
         <div class="fsoc">
           <a href="https://www.instagram.com/dr.secugheorghe/" target="_blank" rel="noopener" aria-label="Instagram">
