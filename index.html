@@ -45,7 +45,7 @@
   "sameAs": ["https://wa.me/447793499947"]
 }
 </script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23c8a882'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='600' fill='white'>DS</text></svg>" type="image/svg+xml"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23c8a882'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='600' fill='white'>SG</text></svg>" type="image/svg+xml"/>
 <link rel="icon" href="images/logo.png" type="image/png" sizes="any"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -84,14 +84,14 @@ body::before{content:'';position:fixed;inset:0;
 #prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--sand),var(--rose));width:0;z-index:9999;transition:width .1s linear}
 
 /* NAVBAR */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5vw;transition:var(--tr);height:74px;display:flex;align-items:center}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 49vw 0 5vw;transition:var(--tr);height:74px;display:flex;align-items:center}
 nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(200,168,130,.2);box-shadow:0 4px 32px rgba(58,46,40,.08)}
 .nav-in{width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .nav-logo{height:48px;width:auto;object-fit:contain}
 .nav-logo-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--dark);letter-spacing:.02em;line-height:1}
 .nav-logo-txt{display:none}
-.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links{display:flex;align-items:center;gap:20px}
 .nav-links a{font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--sand);transition:width .3s}
 .nav-links a:hover{color:var(--dark)}.nav-links a:hover::after{width:100%}
@@ -170,15 +170,22 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .h-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .btn-s{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:var(--white);padding:15px 30px;border-radius:40px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:var(--tr);border:none}
 .btn-s:hover{background:var(--grad);transform:translateY(-2px);box-shadow:0 12px 36px rgba(200,168,130,.45)}
-.btn-g{display:inline-flex;align-items:center;gap:10px;color:var(--mid);font-size:13px;font-weight:500;letter-spacing:.04em;padding:14px 0;transition:var(--tr);animation:btnGlow 3s ease-in-out infinite}
-.btn-g:hover{color:var(--sand)}.btn-g:hover svg{animation:none;transform:translateX(4px)}
-.btn-g svg{transition:transform .3s;animation:arrowBounce 1.8s ease-in-out infinite}
-@keyframes arrowBounce{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
-@keyframes btnGlow{0%,100%{opacity:1}50%{opacity:.7}}
+.btn-g{display:inline-flex;align-items:center;gap:10px;color:var(--mid);font-size:13px;font-weight:500;letter-spacing:.04em;padding:14px 0;transition:var(--tr)}
+.btn-g:hover{color:var(--sand)}
+/* Hero scroll CTA */
+.hero-scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--mid);text-decoration:none;z-index:10;transition:color .3s}
+.hero-scroll:hover{color:var(--sand)}
+.hero-scroll-lbl{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
+.hero-scroll-icon{display:flex;flex-direction:column;gap:-8px;animation:scrollBounce 1.8s ease-in-out infinite}
+.hero-scroll-icon svg:first-child{opacity:.35;margin-bottom:-12px}
+.hero-scroll-icon svg:last-child{opacity:.85}
+@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
 /* Doctor identity block in hero text column */
 .h-id{}
 .h-id-line{width:40px;height:1.5px;background:var(--sand);margin-bottom:16px;opacity:.7}
-.h-id-name{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,2.4vw,36px);font-weight:400;color:var(--dark);letter-spacing:-.01em;margin-bottom:6px}
+.h-id-header{display:flex;align-items:center;gap:14px}
+.h-id-logo{height:52px;width:auto;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 2px 6px rgba(58,46,40,.08))}
+.h-id-name{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,32px);font-weight:400;color:var(--dark);letter-spacing:-.01em;margin-bottom:4px}
 .h-id-title{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid)}
 .h-id-btn{display:inline-flex;align-items:center;gap:9px;border:1.5px solid var(--sand);border-radius:40px;padding:11px 22px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);transition:var(--tr)}
 .h-id-btn:hover{background:var(--sand);color:#fff;box-shadow:0 8px 24px rgba(200,168,130,.3)}
@@ -418,6 +425,7 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 /* RESPONSIVE */
 /* ── TABLET LANDSCAPE 1024px ── */
 @media(max-width:1024px){
+  nav{padding:0 44vw 0 5vw}
   #hero{grid-template-columns:1fr 42%}
   .hcnt{padding:0 40px 0 6vw;gap:clamp(16px,2.4vh,26px)}
   .h1{font-size:clamp(40px,4.2vw,68px)}
@@ -440,6 +448,7 @@ footer{background:var(--dark);padding:72px 5vw 40px}
 @media(max-width:768px){
   section{padding:72px 5vw}
   #stats{padding:72px 5vw}
+  nav{padding:0 5vw}
   .nav-links{display:none}.ham{display:flex}
   /* Hero: full-screen stacked — doctor top, text bottom */
   #hero{grid-template-columns:1fr;height:100svh;display:flex;flex-direction:column}
@@ -555,8 +564,13 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   <div class="hcnt">
     <div class="h-id">
       <div class="h-id-line"></div>
-      <div class="h-id-name">Dr. Secu Gheorghe</div>
-      <div class="h-id-title" data-i18n="pt2">Obstetrician-Ginecolog · NHS UK</div>
+      <div class="h-id-header">
+        <img src="images/logo.png" alt="Dr. Secu" class="h-id-logo"/>
+        <div>
+          <div class="h-id-name">Dr. Secu Gheorghe</div>
+          <div class="h-id-title" data-i18n="pt2">Obstetrician-Ginecolog · NHS UK</div>
+        </div>
+      </div>
     </div>
     <h1 class="h1">
       <span data-i18n="h1a">Sarcina ta,</span><br>
@@ -568,10 +582,6 @@ footer{background:var(--dark);padding:72px 5vw 40px}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         <span data-i18n="hb1">Programează Consultație</span>
       </a>
-      <a href="#about" class="btn-g">
-        <span data-i18n="hb2">Află mai multe</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
     </div>
   </div>
 
@@ -579,6 +589,15 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   <div class="hero-doc">
     <img src="images/doctor.png" alt="Dr. Secu Gheorghe"/>
   </div>
+
+  <!-- Scroll CTA — bottom center -->
+  <a href="#about" class="hero-scroll" aria-label="Află mai multe">
+    <span class="hero-scroll-lbl" data-i18n="hb2">Află mai multe</span>
+    <div class="hero-scroll-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+  </a>
 </section>
 
 <section id="about">
