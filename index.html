@@ -151,8 +151,8 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 .h-trust-sep{display:none}
 
 /* Doctor photo — right, full body, seamless transparent blend */
-.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden}
-.hero-doc img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;mix-blend-mode:multiply}
+.hero-doc{position:relative;z-index:1;background:transparent;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.hero-doc img{width:auto;height:100%;max-height:92vh;object-fit:contain;object-position:bottom center;display:block;mix-blend-mode:multiply}
 .hero-doc-info{position:absolute;bottom:44px;left:0;z-index:2;padding:0 36px}
 .hero-doc-line{width:28px;height:1px;background:var(--sand);margin-bottom:16px}
 .hero-doc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--dark);letter-spacing:.01em;margin-bottom:6px}
