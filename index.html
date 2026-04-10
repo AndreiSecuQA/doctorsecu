@@ -183,9 +183,9 @@ nav.sc{background:rgba(250,247,242,.95);backdrop-filter:blur(24px) saturate(180%
 /* Doctor identity block in hero text column */
 .h-id{}
 .h-id-line{width:40px;height:1.5px;background:var(--sand);margin-bottom:16px;opacity:.7}
-.h-id-header{display:flex;align-items:center;gap:14px}
-.h-id-logo{height:52px;width:auto;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 2px 6px rgba(58,46,40,.08))}
-.h-id-name{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,32px);font-weight:400;color:var(--dark);letter-spacing:-.01em;margin-bottom:4px}
+.h-id-header{display:flex;align-items:center;gap:18px}
+.h-id-logo{height:clamp(64px,7vw,88px);width:auto;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 2px 8px rgba(58,46,40,.1))}
+.h-id-name{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.2vw,34px);font-weight:400;color:var(--dark);letter-spacing:-.01em;margin-bottom:4px}
 .h-id-title{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid)}
 .h-id-btn{display:inline-flex;align-items:center;gap:9px;border:1.5px solid var(--sand);border-radius:40px;padding:11px 22px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);transition:var(--tr)}
 .h-id-btn:hover{background:var(--sand);color:#fff;box-shadow:0 8px 24px rgba(200,168,130,.3)}
@@ -456,11 +456,14 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   .hero-doc img{width:auto;height:100%;max-width:100%;object-fit:contain;object-position:bottom center}
   .hcnt{flex:1;height:52%;min-height:0;padding:20px 6vw 28px;gap:14px;justify-content:center}
   .h1{font-size:clamp(32px,7vw,50px)}
+  .h-id-header{gap:12px}
+  .h-id-logo{height:52px}
   .h-id-name{font-size:clamp(18px,4vw,26px)}
   .h-id-title{font-size:10px}
   .h-sub{font-size:14px;line-height:1.75;max-width:100%}
   .btn-s{padding:12px 22px;font-size:12px}
   .btn-g{font-size:12px}
+  .hero-scroll{bottom:16px}
   /* Alte secțiuni */
   .sg{grid-template-columns:1fr}
   .tg{grid-template-columns:1fr}
@@ -484,7 +487,9 @@ footer{background:var(--dark);padding:72px 5vw 40px}
   .hero-doc{flex:0 0 45%;height:45%}
   .hcnt{flex:1;height:55%;padding:16px 5vw 24px;gap:12px}
   .h1{font-size:clamp(30px,9vw,44px)}
-  .h-id-name{font-size:clamp(17px,5vw,22px)}
+  .h-id-logo{height:44px}
+  .h-id-header{gap:10px}
+  .h-id-name{font-size:clamp(16px,5vw,22px)}
   .h-btns{gap:8px}
   .btn-s{padding:11px 20px;font-size:12px}
   .btn-s,.btn-g{justify-content:center}
